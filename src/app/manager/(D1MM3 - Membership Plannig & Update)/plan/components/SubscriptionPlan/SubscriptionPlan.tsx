@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './SubscriptionPlan.module.css';
 import MembershipCard from '../MembershipCard/MembershipCard';
+import { PackageHistoryItem } from '../../types';
 
 interface MembershipPlan {
     id: string;
@@ -52,10 +53,10 @@ const SubscriptionPlan: React.FC<SubscriptionPlanProps> = () => {
                 console.log('Package History:', packageHistory);
 
                 // Map packageHistory data directly to UI props (no API calls)
-                const mappedPlans: MembershipPlan[] = packageHistory.map((pkg: any) => {
+                const mappedPlans: MembershipPlan[] = packageHistory.map((pkg: PackageHistoryItem) => {
                     // Map fields from packageHistory data
                     const mappedPlan = {
-                        id: pkg.packageID || pkg.id,
+                        id: pkg.packageID || pkg.id || '',
                         planName: pkg.pkgName || pkg.planName || 'Unknown Plan',
                         price: pkg.price || 0,
                         duration: pkg.validity || 0,
@@ -86,7 +87,7 @@ const SubscriptionPlan: React.FC<SubscriptionPlanProps> = () => {
     }, []);
 
     // Derive status from planPayment or business rules
-    const deriveStatus = (packageData: any): 'Upcoming' | 'Active' | 'Expired' => {
+    const deriveStatus = (packageData: PackageHistoryItem): 'Upcoming' | 'Active' | 'Expired' => {
         // If planPayment exists, use it to determine status
         if (packageData.planPayment) {
             const paymentStatus = packageData.planPayment.status;

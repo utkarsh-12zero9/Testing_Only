@@ -26,12 +26,11 @@ type RushHours = {
 
 function RushHourIndicator({ tab }: RushHourIndicatorProps) {
   const [isAM, setIsAM] = useState(true);
-  const [rushHourData, setRushHourData] = useState<RushHours | null>(null);
   const businessID = useManagerSelector(selectBusinessID);
 
   useEffect(() => {
     async function loadData() {
-      if(!businessID) return;
+      if (!businessID) return;
       try {
         const [error, data] = await getRushHourData(businessID);
         if (!error) {
@@ -63,7 +62,7 @@ function RushHourIndicator({ tab }: RushHourIndicatorProps) {
         </button>
       </header>
 
-      <AMPMChart data={rushHourData?.[tab]} />
+      <AMPMChart />
 
       <hr className={styles.hr} />
       <footer className={styles.rushTrendInfo}>

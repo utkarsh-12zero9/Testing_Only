@@ -6,9 +6,10 @@ import styles from './FetchedPlanCard.module.css';
 import PrimaryButton from '@/globalComponents/buttons/primaryButton/PrimaryButton';
 import SecondaryButton from '@/globalComponents/buttons/secondaryButton/SecondaryButton';
 import { useRouter } from 'next/navigation';
+import { MembershipPlan } from '../../../types';
 
 interface FetchedPlanCardProps {
-    plan: any;
+    plan: MembershipPlan;
 }
 
 const FetchedPlanCard: React.FC<FetchedPlanCardProps> = ({ plan }) => {

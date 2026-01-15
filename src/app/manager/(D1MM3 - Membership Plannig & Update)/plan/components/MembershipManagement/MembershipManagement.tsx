@@ -1,13 +1,15 @@
 'use client'
 import { useRouter } from 'next/navigation';
 import React, { useState, useMemo, useCallback } from 'react';
+import Image from 'next/image';
 import styles from './MembershipManagement.module.css';
 import LockedSlotPopup from '../../(Pages)/become-a-coach/localComponents/LockedSlotPopup/LockedSlotPopup';
 import FetchedPlanCard from './FetchedPlanCard/FetchedPlanCard';
+import { MembershipPlan } from '../../types';
 
 interface MembershipManagementProps {
     maxSlots?: number;
-    plans: any[]; // Plans passed from parent
+    plans: MembershipPlan[]; // Plans passed from parent
 }
 
 // Constant moved outside component
@@ -64,7 +66,7 @@ const MembershipManagement: React.FC<MembershipManagementProps> = ({
                     {Array.from({ length: LOCKED_SLOTS }).map((_, index) => (
                         <div key={`locked-${index}`} className={styles.planCard} onClick={handleCardClick}>
                             <div className={styles.lockIcon}>
-                                <img src="/plan/lockIcon.svg" alt="Locked Plan" width="24" height="24" />
+                                <Image src="/plan/lockIcon.svg" alt="Locked Plan" width={24} height={24} />
                             </div>
                         </div>
                     ))}

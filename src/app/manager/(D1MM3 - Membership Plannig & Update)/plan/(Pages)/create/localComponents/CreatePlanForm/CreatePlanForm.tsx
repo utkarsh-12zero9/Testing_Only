@@ -8,11 +8,12 @@ import PrimaryButton from '@/globalComponents/buttons/primaryButton/PrimaryButto
 import { validateCreatePlanForm, isFormValid } from '../../utils/formValidation';
 import { createMembershipPlan } from '../../../../services/membershipService';
 import { invalidatePlansCache } from '../../../../utils/cacheUtils';
+import { MembershipPlan, PlanFormData, MembershipPlanPayload } from '../../../../types';
 
 interface CreatePlanFormProps {
-    onSubmit?: (data: any) => void;
+    onSubmit?: (data: PlanFormData) => void;
     mode?: 'create' | 'edit';
-    initialData?: any;
+    initialData?: MembershipPlan;
     planID?: string;
 }
 
@@ -51,7 +52,7 @@ const PERIOD_OPTIONS = [
     { label: '365 Days', value: '365' }
 ];
 
-export default function CreatePlanForm({ onSubmit, mode = 'create', initialData, planID }: CreatePlanFormProps) {
+export default function CreatePlanForm({ mode = 'create', initialData }: CreatePlanFormProps) {
     const router = useRouter();
     const [membershipName, setMembershipName] = useState('');
     const [selectedObjectives, setSelectedObjectives] = useState<string[]>([]);
@@ -59,7 +60,6 @@ export default function CreatePlanForm({ onSubmit, mode = 'create', initialData,
     const [accessibleFeatures, setAccessibleFeatures] = useState<string[]>([]);
     const [membershipType, setMembershipType] = useState('Session-Based');
     const [period, setPeriod] = useState('');
-    const [totalPayout, setTotalPayout] = useState('');
     const [sessionCount, setSessionCount] = useState('');
     const [sessionPrice, setSessionPrice] = useState('');
     const [planPrice, setPlanPrice] = useState('');
@@ -100,7 +100,6 @@ export default function CreatePlanForm({ onSubmit, mode = 'create', initialData,
         const setters: { [key: string]: (value: string) => void } = {
             membershipName: setMembershipName,
             period: setPeriod,
-            totalPayout: setTotalPayout,
             planPrice: setPlanPrice,
             sessionCount: setSessionCount,
             sessionPrice: setSessionPrice,
@@ -149,12 +148,11 @@ export default function CreatePlanForm({ onSubmit, mode = 'create', initialData,
         setSessionPrice('');
         setPlanPrice('');
         setValidity('');
-        setTotalPayout('');
         setErrors({});
     }, []);
 
     // Change handler for all input events
-    const handleChange = useCallback((field: string, value?: any) => {
+    const handleChange = useCallback((field: string, value?: string | { name: string; value: string }) => {
         switch (field) {
             case 'membershipName':
             case 'period':
@@ -162,10 +160,12 @@ export default function CreatePlanForm({ onSubmit, mode = 'create', initialData,
             case 'sessionCount':
             case 'sessionPrice':
             case 'validity':
-                handleInputChange(field, value);
+                handleInputChange(field, typeof value === 'string' ? value : value?.value || '');
                 break;
             case 'membershipType':
-                handleMembershipTypeChange(value);
+                if (value && typeof value === 'object') {
+                    handleMembershipTypeChange(value);
+                }
                 break;
             case 'termsCheckbox':
                 if (onlinePaymentConsents.includes('terms_accepted')) {
@@ -224,9 +224,9 @@ export default function CreatePlanForm({ onSubmit, mode = 'create', initialData,
             }
 
             // Prepare payload
-            const payload: any = {
+            const payload: MembershipPlanPayload = {
                 membershipName,
-                membershipType,
+                membershipType: membershipType as 'Period-Based' | 'Session-Based',
                 membershipObjective: selectedObjectives,
                 keyFeatures: accessibleFeatures,
             };
@@ -280,9 +280,10 @@ export default function CreatePlanForm({ onSubmit, mode = 'create', initialData,
                 alert(response?.message || 'Failed to create membership plan. Please try again.');
                 setIsSubmitting(false);
             }
-        } catch (error: any) {
+        } catch (error: unknown) {
             console.error('Error creating membership plan:', error);
-            alert(error?.data?.message || 'An error occurred while creating the plan. Please try again.');
+            const errorMessage = error && typeof error === 'object' && 'data' in error && error.data && typeof error.data === 'object' && 'message' in error.data ? String(error.data.message) : 'An error occurred while creating the plan. Please try again.';
+            alert(errorMessage);
             setIsSubmitting(false);
         }
     }, [validateForm, membershipName, membershipType, selectedObjectives, accessibleFeatures, onlinePaymentConsents, period, planPrice, sessionCount, sessionPrice, validity, router]);

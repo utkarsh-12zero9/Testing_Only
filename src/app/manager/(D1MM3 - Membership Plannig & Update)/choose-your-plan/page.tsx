@@ -16,12 +16,21 @@ import EnterprisePopup from "./components/Enterprise/EnterprisePopup";
 import LoadingPage from "@/globalComponents/LoadingPage/LoadingPage";
 import { Payment } from "@/feature-modules/manager/(D1MM9 - User Verification)/types";
 
+interface PackagePlan {
+	packageID: string;
+	pkgName: string;
+	validity: number;
+	pricing: {
+		invoiceAmount: number;
+	};
+}
+
 export default function ChoosePlan() {
 	const router = useRouter();
 	const pathname = usePathname();
 
-	const [monthlyPlans, setMonthlyPlans] = useState<any[]>([]);
-	const [quarterlyPlans, setQuarterlyPlans] = useState<any[]>([]);
+	const [monthlyPlans, setMonthlyPlans] = useState<PackagePlan[]>([]);
+	const [quarterlyPlans, setQuarterlyPlans] = useState<PackagePlan[]>([]);
 	const [activeTab, setActiveTab] = useState(0);
 
 	const [selectedPlanID, setSelectedPlanID] = useState<string | null>(null);
@@ -101,7 +110,7 @@ export default function ChoosePlan() {
 	const visiblePlans = activeTab === 0 ? monthlyPlans : quarterlyPlans;
 	const selectedPlan = visiblePlans.find((p) => p.packageID === selectedPlanID);
 
-	const handlePayment = async (plan: any) => {
+	const handlePayment = async (plan: PackagePlan) => {
 		setIsLoading(true);
 		try {
 			const businessData = JSON.parse(localStorage.getItem("businessData") || "{}");
@@ -136,9 +145,9 @@ export default function ChoosePlan() {
 
 			setPaymentData(payment);
 			setShowPaymentPopup(true);
-		} catch (error: any) {
+		} catch (error: unknown) {
 			console.error("Error creating order:", error);
-			const backendError = error?.data?.message || error?.data || "Failed to create order";
+			const backendError = error && typeof error === 'object' && 'data' in error && error.data && typeof error.data === 'object' && 'message' in error.data ? String(error.data.message) : (error && typeof error === 'object' && 'data' in error && error.data ? String(error.data) : "Failed to create order");
 			alert(backendError);
 			throw error;
 		} finally {
@@ -146,7 +155,7 @@ export default function ChoosePlan() {
 		}
 	};
 
-	const handleSuccessPayment = (invoiceUrl: string) => {
+	const handleSuccessPayment = () => {
 		setShowPaymentPopup(false);
 		router.push("/manager/plan");
 	};

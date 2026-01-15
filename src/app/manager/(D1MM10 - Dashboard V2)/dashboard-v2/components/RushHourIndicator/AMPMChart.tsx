@@ -39,7 +39,7 @@ function pctToHeight(pct: number, maxHeight = 150) {
 }
 
 
-export default function AMPMChart({ data }: any) {
+export default function AMPMChart() {
   return (
     <div className={styles.container}>
       <div className={styles.chartTitle}>

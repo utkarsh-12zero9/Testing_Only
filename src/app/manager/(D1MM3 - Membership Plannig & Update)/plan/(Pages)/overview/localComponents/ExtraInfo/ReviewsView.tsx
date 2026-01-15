@@ -2,8 +2,9 @@ import React from 'react';
 import { TrendingUp } from 'lucide-react';
 import Image from 'next/image';
 import styles from './ExtraInfo.module.css';
+import { ReviewCardProps } from '../../../../types';
 
-const ReviewCard = ({ name, date, rating, comment, avatar }: any) => (
+const ReviewCard = ({ name, date, rating, comment, avatar }: ReviewCardProps) => (
     <div className={styles.reviewCard}>
         <div className={styles.reviewHeader}>
             <div className={styles.reviewerAvatar}>

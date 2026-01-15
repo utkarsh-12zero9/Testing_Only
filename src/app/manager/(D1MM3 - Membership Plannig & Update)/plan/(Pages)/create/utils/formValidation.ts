@@ -63,7 +63,7 @@ export function isFormValid(errors: ValidationErrors): boolean {
 
 export function validateField(
     fieldName: keyof CreatePlanFormData,
-    value: any,
+    value: string | string[] | undefined,
     formData: Partial<CreatePlanFormData>
 ): string {
     switch (fieldName) {

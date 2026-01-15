@@ -5,6 +5,7 @@ import Image from 'next/image';
 import styles from './ExtraInfo.module.css';
 import { getTrainerProfileByPlanID } from '../../../../services/trainerService';
 import { useSearchParams } from 'next/navigation';
+import { TrainerCardProps } from '../../../../types';
 
 interface TrainerProfile {
     ID: string;
@@ -19,7 +20,7 @@ interface TrainerProfile {
     };
 }
 
-const TrainerCard = ({ name, role, expertise, avatar }: any) => (
+const TrainerCard = ({ name, role, expertise, avatar }: TrainerCardProps) => (
     <div className={styles.trainerCard}>
         <div className={styles.trainerAvatar}>
             <Image src={avatar || "/plan/Male.svg"} alt={name} width={40} height={40} className={styles.avatarImg} />
@@ -42,7 +43,7 @@ const TrainerCard = ({ name, role, expertise, avatar }: any) => (
 );
 
 export default function TrainersView() {
-    const [trainers, setTrainers] = useState<any[]>([]);
+    const [trainers, setTrainers] = useState<TrainerCardProps[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const searchParams = useSearchParams();
 

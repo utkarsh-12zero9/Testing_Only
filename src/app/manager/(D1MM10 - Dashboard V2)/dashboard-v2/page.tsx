@@ -23,7 +23,12 @@ export default function Page() {
   const businessID = useManagerSelector(selectBusinessID);
   const router = useRouter();
 
-  const [dashboardData, setDashboardData] = useState<any>(null);
+  const [dashboardData, setDashboardData] = useState<{
+    activeMembers?: number;
+    pendingRenewals?: number;
+    checkIns?: number;
+    expiringSoonMembers?: number;
+  } | null>(null);
 
   useEffect(() => {
     async function fetchDashboardData() {
@@ -39,7 +44,7 @@ export default function Page() {
         console.log(error);
       }
     }
-    
+
     fetchDashboardData();
   }, [businessID]);
 

@@ -56,7 +56,7 @@ const OrderSummary: React.FC<OrderSummaryProps> = ({
     );
 
     // Consolidated change handler
-    const handleChange = useCallback((field: string, value: any) => {
+    const handleChange = useCallback((field: string, value: string | boolean | null) => {
         switch (field) {
             case 'increment':
                 if (quantity < maxQuantity) {

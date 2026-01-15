@@ -1,4 +1,5 @@
 import { apiPath } from "../lib/config";
+import { MembershipPlanPayload } from "../types";
 
 async function handleJSON(res: Response) {
     const text = await res.text();
@@ -7,7 +8,7 @@ async function handleJSON(res: Response) {
     return data;
 }
 
-export async function createMembershipPlan(businessID: string, payload: any) {
+export async function createMembershipPlan(businessID: string, payload: MembershipPlanPayload) {
     const res = await fetch(apiPath(`/manager/plan/createMembershipPlan/${businessID}`), {
         method: 'POST',
         headers: {
@@ -48,7 +49,7 @@ export async function getMembershipPlanById(planID: string) {
     const res = await fetch(apiPath(`/manager/plan/getMembershipPlan?planID=${planID}`), {
         method: 'GET',
     });
-    const data = await handleJSON(res); 
+    const data = await handleJSON(res);
     return data;
 }
 
@@ -59,7 +60,7 @@ export async function deletePlan(planID: string) {
     return handleJSON(res);
 }
 
-export async function updateMembershipPlan(planID: string, payload: any) {
+export async function updateMembershipPlan(planID: string, payload: Partial<MembershipPlanPayload>) {
     const res = await fetch(apiPath(`/manager/plan/updateMembershipPlan/${planID}`), {
         method: 'PATCH',
         headers: {

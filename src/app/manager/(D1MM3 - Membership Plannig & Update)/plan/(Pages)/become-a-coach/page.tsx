@@ -253,9 +253,10 @@ export default function BecomeACoachPage() {
                     } else {
                         alert(result.message || 'Failed to delete trainer profile');
                     }
-                } catch (error: any) {
+                } catch (error: unknown) {
                     console.error('Error deleting trainer:', error);
-                    alert(error.data?.message || 'An error occurred while deleting the trainer profile');
+                    const errorMsg = error && typeof error === 'object' && 'data' in error && error.data && typeof error.data === 'object' && 'message' in error.data ? String(error.data.message) : 'An error occurred while deleting the trainer profile';
+                    alert(errorMsg);
                 }
             }
         }
@@ -336,9 +337,10 @@ export default function BecomeACoachPage() {
                     } else {
                         return { success: false, trainer: trainer.name, error: response?.message };
                     }
-                } catch (error: any) {
+                } catch (error: unknown) {
                     console.error(`Error updating trainer ${trainer.name}:`, error);
-                    return { success: false, trainer: trainer.name, error: error?.data?.message || error.message };
+                    const errorMsg = error && typeof error === 'object' && 'data' in error && error.data && typeof error.data === 'object' && 'message' in error.data ? String(error.data.message) : (error && typeof error === 'object' && 'message' in error ? String(error.message) : 'Unknown error');
+                    return { success: false, trainer: trainer.name, error: errorMsg };
                 }
             });
 

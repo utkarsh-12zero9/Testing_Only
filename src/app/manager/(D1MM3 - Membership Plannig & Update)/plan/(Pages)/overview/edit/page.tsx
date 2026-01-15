@@ -9,6 +9,7 @@ import CommonPopup from '@/globalComponents/Popups/Common/CommonPopup';
 import CreatePlanForm from '../../create/localComponents/CreatePlanForm/CreatePlanForm';
 import { getMembershipPlanById, updateMembershipPlan } from '../../../services/membershipService';
 import { invalidatePlansCache } from '../../../utils/cacheUtils';
+import { MembershipPlan, PlanFormData } from '../../../types';
 
 import styles from './page.module.css';
 
@@ -17,13 +18,13 @@ export default function EditPlanPage() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const [isLoading, setIsLoading] = useState(true);
-    const [planData, setPlanData] = useState<any>(null);
+    const [planData, setPlanData] = useState<MembershipPlan | null>(null);
     const [planID, setPlanID] = useState<string | null>(null);
     const [showSuccessPopup, setShowSuccessPopup] = useState(false);
     const [showErrorPopup, setShowErrorPopup] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const [showPriceChangePopup, setShowPriceChangePopup] = useState(false);
-    const [pendingFormData, setPendingFormData] = useState<any>(null);
+    const [pendingFormData, setPendingFormData] = useState<PlanFormData | null>(null);
 
     useEffect(() => {
         const fetchPlanDetails = async () => {
@@ -59,15 +60,15 @@ export default function EditPlanPage() {
         fetchPlanDetails();
     }, [router, searchParams]);
 
-    const handleSubmit = async (formData: any) => {
+    const handleSubmit = async (formData: PlanFormData) => {
         if (!planID) {
             alert('Plan ID not found');
             return;
         }
 
         // Check if price has changed
-        const originalDurationDetails = planData.durationDetails || {};
-        const isPeriodBased = planData.membershipType === 'Period-Based';
+        const originalDurationDetails = planData?.durationDetails || {};
+        const isPeriodBased = planData?.membershipType === 'Period-Based';
 
         let priceChanged = false;
         if (isPeriodBased) {
@@ -90,13 +91,23 @@ export default function EditPlanPage() {
         await submitUpdate(formData, false);
     };
 
-    const submitUpdate = async (formData: any, priceChangeAcknowledged: boolean) => {
+    const submitUpdate = async (formData: PlanFormData, priceChangeAcknowledged: boolean) => {
         if (!planID) return;
 
         setIsLoading(true);
         try {
+            // Convert string values to numbers for the API payload
             const payload = {
-                ...formData,
+                membershipName: formData.membershipName,
+                membershipObjective: formData.selectedObjectives,
+                keyFeatures: formData.accessibleFeatures,
+                membershipType: formData.membershipType,
+                ...(formData.period && { period: Number(formData.period) }),
+                ...(formData.planPrice && { planPrice: Number(formData.planPrice) }),
+                ...(formData.sessionCount && { sessionCount: Number(formData.sessionCount) }),
+                ...(formData.sessionPrice && { sessionPrice: Number(formData.sessionPrice) }),
+                ...(formData.validity && { validity: Number(formData.validity) }),
+                ...(formData.onlinePaymentConsents.length > 0 && { paymentID: formData.onlinePaymentConsents[0] }),
                 ...(priceChangeAcknowledged && { priceChangeAcknowledged: true })
             };
 
@@ -118,9 +129,10 @@ export default function EditPlanPage() {
                 setErrorMessage(response.message || 'Failed to update plan');
                 setShowErrorPopup(true);
             }
-        } catch (error: any) {
+        } catch (error: unknown) {
             console.error('Error updating plan:', error);
-            setErrorMessage(error?.data?.message || 'An error occurred while updating the plan');
+            const errorMsg = error && typeof error === 'object' && 'data' in error && error.data && typeof error.data === 'object' && 'message' in error.data ? String(error.data.message) : 'An error occurred while updating the plan';
+            setErrorMessage(errorMsg);
             setShowErrorPopup(true);
         } finally {
             setIsLoading(false);
