@@ -1,0 +1,140 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bodyfill-primary-blacktrans);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.popup {
+    width: 90%;
+    max-width: 500px;
+    background-color: var(--dark-primary-blue);
+    border-radius: var(--border-radius-large);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+    animation: scaleIn 0.3s ease-out;
+    max-height: 80vh;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--bodytext-pure-white);
+    margin: 0;
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    overflow-y: auto;
+    padding-right: 4px;
+    max-height: 400px;
+}
+
+.grid::-webkit-scrollbar {
+    width: 6px;
+}
+
+.grid::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.grid::-webkit-scrollbar-thumb {
+    background: var(--primary-blue);
+    border-radius: 99px;
+}
+
+.chip {
+    padding: 16px 12px;
+    background-color: var(--bodyfill-primary-blue-30);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--bodytext-pure-white);
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+}
+
+.chip:hover {
+    background-color: var(--bodyfill-primary-blue-50);
+}
+
+.chip.selected {
+    border: 1px solid var(--primary-green);
+    background-color: var(--bodyfill-primary-blue-50);
+}
+
+.confirmButton {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--button-primary-green);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--labels-off-black);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+}
+
+.confirmButton:hover {
+    filter: brightness(0.9);
+}

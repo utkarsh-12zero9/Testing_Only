@@ -1,0 +1,54 @@
+.welcomeBox {
+  width: 344;
+  height: 199;
+  border-radius: var(--border-radius-large);
+  margin-top: 50px;
+  gap: 20px;
+  opacity: 1;
+  padding: 15px;
+  background: var(--bodyfill-transparent-overlay-primary-blue-30);
+  backdrop-filter: blur(50px);
+  color: var(--bodytext-pure-white);
+}
+
+.title {
+  font: var(--fonts-barlow);
+  font-size: 25px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font: var(--fonts-poppins);
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.progressContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+
+  >:first-child {
+    width: 80%;
+    border-right: 1px solid var(--inactive-color);
+  }
+
+  >p {
+    flex-grow: 1;
+    text-align: center;
+    font: var(--fonts-barlow);
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: baseline;
+  }
+}
+
+.welcomeBox button {
+  margin-top: 20px;
+}

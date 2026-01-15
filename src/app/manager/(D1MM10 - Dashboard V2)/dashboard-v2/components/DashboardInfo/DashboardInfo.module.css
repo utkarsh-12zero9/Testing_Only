@@ -1,0 +1,13 @@
+.container{
+  margin-bottom: 100px;
+}
+.container>* {
+  margin-bottom: 10px;
+}
+
+.cardsContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}

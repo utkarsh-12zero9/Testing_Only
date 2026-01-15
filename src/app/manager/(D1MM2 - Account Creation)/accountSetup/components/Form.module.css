@@ -1,0 +1,20 @@
+.form {
+  margin-top: 20px;
+  padding: 20px 8px;
+  background-color: var(--bodyfill-primary-blue-30);
+  border-radius: 15px;
+
+  >* {
+    margin-bottom: 12px;
+  }
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  >button {
+    flex-shrink: 0;
+  }
+}

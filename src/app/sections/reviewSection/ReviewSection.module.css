@@ -1,0 +1,162 @@
+.reviewSection {
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+.overlay {
+  display: flex;
+  width: 83.333vw;
+  height: 655px;
+  padding: 100px 80px 80px 80px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background-color: var(--background-blur-green-2);
+}
+
+.reviewSectionTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: -200px;
+  position: relative;
+  width: 918px;
+}
+
+.reviewSectionTitle h1 {
+  font-family: var(--urbanist);
+  font-size: 142px;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--transparent-overlay-off-white-30);
+}
+
+.reviewSectionTitle>p {
+  font-family: var(--urbanist);
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  position: absolute;
+  bottom: 0;
+  color: var(--bodytext-pure-white);
+}
+
+.divider {
+  stroke-width: 1.5px;
+  height: 0px;
+  width: 100%;
+  border-color: var(--transparent-overlay-primary-blue-50);
+}
+
+.reviewContainer {
+  display: flex;
+  gap: 25px;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.reviewMetadata {
+  display: flex;
+  width: 486px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.verticalDivider {
+  stroke-width: 1.5px;
+  border-color: var(--transparent-overlay-primary-blue-50);
+}
+
+.commentsContainer {
+  display: flex;
+  height: 438px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--bodytext-pure-white);
+
+  font-family: var(--poppins);
+  /* overflow: hidden; */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.comments::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 426px) {
+  .reviewSection {
+    width: 100%;
+    border-radius: 11px;
+  }
+
+  .overlay {
+    height: fit-content;
+    width: 100%;
+    padding: 25px 0px;
+
+    gap: 10px;
+
+  }
+
+  .reviewSectionTitle h1 {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .reviewSectionTitle p {
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    /* width: 80%; */
+  }
+
+  .reviewSectionTitle>p {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .reviewContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .divider {
+    width: 90%;
+  }
+
+  .reviewMetadata {
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+
+  .commentsContainer {
+    width: 95%;
+  }
+
+  .comments {
+    width: 100%;
+    overflow-x: hidden;
+    /* padding: 0px 8px; */
+  }
+}

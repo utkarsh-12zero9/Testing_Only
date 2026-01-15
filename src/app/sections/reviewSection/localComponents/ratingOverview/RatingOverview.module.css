@@ -1,0 +1,124 @@
+.ratingOverview {
+    display: flex;
+    height: 119px;
+    max-height: 650px;
+    padding: 8px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    /* width: 90%; */
+    overflow: hidden;
+    /* align-self: stretch; */
+    border-radius: 12px;
+    background-color: var(--transparent-overlay-primary-blue-30);
+    backdrop-filter: blur(25px);
+    width: 84%;
+}
+
+.ratingOverviewLeft,
+.ratingOverviewRight {
+    display: flex;
+    height: 119px;
+    padding: 10px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.ratingOverviewLeft>h4,
+.ratingOverviewRight>h4 {
+    font-family: var(--poppins);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--bodytext-pure-white);
+}
+
+.count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.count h1 {
+    font-family: var(--barlow);
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--bodytext-primary-green);
+}
+
+.count p {
+    font-family: var(--poppins);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--bodytext-pure-white);
+}
+
+.quickInfo {
+    display: flex;
+    height: 119px;
+    padding: 10px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.verticalDivider {
+    height: 100px;
+    color: var(--icons-dark-gray);
+
+}
+
+.divider {
+    stroke-width: 1.5px;
+    height: 0px;
+    /* align-self: stretch; */
+    width: 100%;
+    border-color: var(--transparent-overlay-primary-blue-50);
+}
+
+.trendInfo {
+    display: flex;
+    align-items: center;
+}
+
+.textInfo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.textInfo span {
+    color: var(--bodytext-warning-red);
+    font-family: var(--poppins);
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.textInfo p {
+    font-family: var(--poppins);
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--bodytext-off-white);
+}
+
+@media screen and (max-width: 426px) {
+    .ratingOverview {
+        width: fit-content;
+        height: fit-content;
+        padding: 8px;
+        width: 100%;
+
+    }
+
+}

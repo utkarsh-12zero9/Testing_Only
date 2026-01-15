@@ -1,0 +1,272 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bodyfill-black-2);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup {
+    background-color: var(--dark-primary-blue);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    min-height: 550px;
+    position: relative;
+    animation: slideUp 0.3s ease-out;
+    margin: 0px 8px;
+
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.closeButton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    color: var(--pure-white);
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+    z-index: 10;
+}
+
+.closeButton:hover {
+    opacity: 0.7;
+}
+
+.content {
+    padding: 60px 20px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.avatarContainer {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.trainerId {
+    font-family: var(--font-Urbanist);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--pure-white-50);
+    margin: 0;
+}
+
+.trainerName {
+    font-family: var(--font-Urbanist);
+    font-size: 28px;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--pure-white);
+    margin: 0;
+    text-align: center;
+}
+
+.role {
+    font-family: var(--font-Urbanist);
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--primary-green);
+    margin: 0;
+}
+
+.description {
+    font-family: var(--font-Urbanist);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--pure-white-50);
+    text-align: center;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.deleteButton {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--primary-blue-20);
+    color: var(--pure-white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+    padding: 0px;
+}
+
+.deleteButton:hover {
+    opacity: 0.7;
+}
+
+.editButton {
+    width: 80px;
+    height: 48px;
+    border-radius: 8px;
+    border: 2px solid var(--primary-blue);
+    background-color: transparent;
+    color: var(--pure-white);
+    font-family: var(--font-Urbanist);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.editButton:hover {
+    background-color: var(--primary-blue-50);
+}
+
+.callNowWrapper {
+    flex: 1;
+    display: flex;
+}
+
+.callNowWrapper button {
+    width: 100%;
+}
+
+.tabs {
+    display: flex;
+    padding: 8px;
+    background-color: var(--primary-blue-30);
+    border-radius: 12px;
+    margin: 0 10px;
+    gap: 5px;
+}
+
+.tab {
+    flex: 1;
+    padding: 12px 0;
+    border-radius: 8px;
+    border: none;
+    background-color: transparent;
+    color: var(--pure-white);
+    font-family: var(--font-Urbanist);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.activeTab {
+    background-color: var(--pure-white);
+    color: var(--dark-primary-blue);
+    font-weight: 600;
+}
+
+.tab:hover:not(.activeTab) {
+    background-color: var(--pure-white-20);
+}
+
+.expertiseList {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    background-color: var(--primary-blue-30);
+    border-radius: 12px;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 3px;
+    border-bottom: 2px solid var(--pure-white-20);
+}
+
+.expertiseItem {
+    background-color: var(--dark-primary-blue);
+    height: 50%;
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: var(--pure-white);
+    font-family: var(--font-Urbanist);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.achievementsList {
+    min-height: 100px;
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-blue-30);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 3px;
+    border-bottom: 2px solid var(--pure-white-20);
+    gap: 12px;
+}
+
+.achievementRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.achievementLabel {
+    color: var(--pure-white);
+    font-family: var(--font-Urbanist);
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.achievementValue {
+    color: var(--pure-white-50);
+    font-family: var(--font-Urbanist);
+    font-size: 12px;
+    font-weight: 500;
+    text-align: right;
+}

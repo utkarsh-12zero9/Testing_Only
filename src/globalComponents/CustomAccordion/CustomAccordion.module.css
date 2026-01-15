@@ -1,0 +1,25 @@
+.trigger {
+    border-radius: var(--border-radius);
+    opacity: 1;
+    gap: 4px;
+    border: none;
+    font: var(--fonts-poppins);
+    font-size: 14px;
+}
+
+.item {
+    margin-top: 8px;
+    background-color: var(--bodyfill-dark-green);
+    border: none;
+    padding: 8px;
+    border-radius: var(--border-radius);
+}
+
+.content {
+    font-size: 12px;
+}
+
+.content > hr {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}

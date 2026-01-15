@@ -1,0 +1,47 @@
+.label{
+    font: var(--fonts-poppins);
+    /* font-size: var(--input-font-size); */
+    font-style: normal;
+    line-height: normal;
+    /* color: var(--input-color); */
+}
+
+.popover {
+    padding: 5%;
+}
+
+.button {
+    padding: 8px 16px;
+    gap: 10px;
+    font: var(--fonts-poppins);
+    font-size: var(--input-font-size);
+    font-style: normal;
+    line-height: normal;
+    background: var(--bodyfill-dark-primary-blue);
+    border-radius: var(--border-radius);
+    height: 45px;
+    width: 100%;
+    /* color: var(--input-color); */
+    /* caret-color: var(--input-color); */
+    outline: none;
+    text-align: left !important;
+}
+
+.calendar {
+    border: 1px solid black;
+}
+
+.errorText {
+    font: var(--fonts-poppins);
+    margin-top: 4px;
+    color: var(--bodytext-warning-red);
+    font-size: 0.85rem;
+}
+
+.container {
+    margin-bottom: 1rem !important;
+}
+
+.options {
+    font-size: var(--input-font-size);
+}

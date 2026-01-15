@@ -1,0 +1,83 @@
+.planNav {
+  display: flex;
+  /* width: 249px; */
+  padding: 10px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--transparent-overlay-primary-blue-30);
+  backdrop-filter: blur(25px);
+}
+
+.tabButton {
+  display: flex;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.container {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container p {
+  color: var(--Headings-Dark-Gray, var(--dark-green));
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--bodytext-pure-white);
+
+}
+
+.active {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  background-color: var(--bodyfill-light-blue-10);
+  cursor: pointer;
+}
+
+
+.active p {
+  color: var(--Headings-Dark-Gray, var(--dark-green));
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.divider {
+  height: 48px;
+  border-color: var(--icons-dark-gray);
+}
+
+@media screen and (max-width: 426px) {
+  .planNav {
+    /* width: 150px; */
+    height: 38px;
+  }
+
+  .container {
+    display: flex;
+    padding: 4px 8px;
+    gap: 10px;
+    border-radius: 4px;
+  }
+
+  .divider {
+    height: 30px;
+  }
+}

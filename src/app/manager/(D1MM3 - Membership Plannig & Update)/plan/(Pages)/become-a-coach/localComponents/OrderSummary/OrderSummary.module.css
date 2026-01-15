@@ -1,0 +1,406 @@
+.overlay {
+    position: fixed;
+    padding: 0 4px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bodyfill-black-2);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 9999;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.popup {
+    width: 100%;
+    max-width: 340px;
+    background-color: var(--primary-blue-black-4);
+    border-radius: 15px 15px 0 0;
+    padding: 30px 8px 20px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    animation: slideUp 0.3s ease-out;
+    max-height: 650px;
+    overflow: hidden;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    opacity: 0.7;
+}
+
+.headerIcon {
+    color: var(--headings-primary-green-white);
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--headings-primary-green-white);
+    margin: 0;
+    font-style: italic;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 565px;
+    overflow-y: auto;
+    padding: 0 10px;
+    padding-bottom: 100px;
+}
+
+.content::-webkit-scrollbar {
+    width: 4px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: var(--border-primary-blue-50);
+    border-radius: 2px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    max-width: 304px;
+    padding: 0 5px;
+}
+
+.sectionTitle {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--bodytext-pure-white);
+    margin: 0;
+    opacity: 0.9;
+}
+
+.description {
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--bodytext-very-light-gray);
+    line-height: 1.5;
+    margin: 0;
+    opacity: 0.85;
+    letter-spacing: 0.2px;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-primary-blue-50);
+}
+
+.infoRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.infoLabel {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--bodytext-pure-white);
+}
+
+.infoLabel svg {
+    color: var(--bodytext-very-light-gray);
+}
+
+.infoValue {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--bodytext-pure-white);
+}
+
+.quantityControl {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quantityButton {
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: 1px solid var(--border-pure-white);
+    border-radius: 4px;
+    color: var(--bodytext-pure-white);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quantityButton:hover:not(:disabled) {
+    background-color: var(--pure-white-10);
+}
+
+.quantityButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.quantityValue {
+    min-width: 24px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--bodytext-pure-white);
+}
+
+.couponSection {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.couponButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--bodytext-pure-white);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.chevron {
+    transition: transform 0.3s ease;
+}
+
+.chevronRotated {
+    transform: rotate(180deg);
+}
+
+.couponInput {
+    display: flex;
+    gap: 8px;
+}
+
+.input {
+    flex: 1;
+    padding: 8px 12px;
+    background-color: var(--bodyfill-primary-blue-100);
+    border: 1px solid var(--border-primary-blue-50);
+    border-radius: var(--border-radius);
+    color: var(--bodytext-pure-white);
+    font-size: 14px;
+}
+
+.input::placeholder {
+    color: var(--bodytext-very-light-gray);
+}
+
+.applyButton {
+    padding: 8px 16px;
+    background-color: var(--button-primary-green);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--labels-off-black);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.applyButton:hover {
+    filter: brightness(0.9);
+}
+
+.priceRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.priceLabel {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--button-primary-green);
+}
+
+.priceValue {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--bodytext-pure-white);
+}
+
+.discountLabel {
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--bodytext-very-light-gray);
+    padding-left: 20px;
+}
+
+.discountValue {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--button-primary-green);
+}
+
+.gstButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--bodytext-pure-white);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gstAmount {
+    color: var(--button-primary-green);
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+}
+
+.totalLabel {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--bodytext-pure-white);
+    font-style: italic;
+}
+
+.totalValue {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--button-primary-green);
+    font-style: italic;
+}
+
+.termsContainer {
+    margin-top: 8px;
+    width: 100%;
+    max-width: 304px;
+}
+
+.termsLabel {
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+    align-items: flex-start;
+}
+
+.checkbox {
+    margin-top: 2px;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--button-primary-green);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.termsText {
+    font-size: 9px;
+    font-weight: 300;
+    color: var(--bodytext-very-light-gray);
+    line-height: 1.3;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    width: 100%;
+    max-width: 304px;
+}
+
+.editButton {
+    flex: 0 0 auto;
+    padding: 10px 24px;
+    background: transparent;
+    border: 2px solid var(--border-pure-white);
+    border-radius: var(--border-radius);
+    color: var(--bodytext-pure-white);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.editButton:hover {
+    background-color: var(--pure-white-10);
+}
+
+.payButton {
+    flex: 1;
+    padding: 10px 24px;
+    background-color: var(--button-primary-green);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--labels-off-black);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.payButton:hover:not(:disabled) {
+    filter: brightness(0.9);
+}
+
+.payButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

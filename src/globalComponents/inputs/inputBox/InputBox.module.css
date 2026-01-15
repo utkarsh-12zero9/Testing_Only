@@ -1,0 +1,53 @@
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  margin-bottom: 1rem;
+}
+
+.inputBox div {
+  display: flex;
+  padding: 4px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 8px;
+  background: var(--bodyfill-dark-primary-blue);
+  border: 1.5px solid var(--bodyfill-dark-primary-blue);
+
+  &:focus-within {
+    background-color: inherit;
+    border-color: var(--border-primary-green);
+  }
+
+
+
+  
+}
+
+.optional {
+    font-size: var(--input-optional-font-size);
+    margin-left: 2px;
+}
+
+.inputBox input {
+  padding: 8px 16px;
+  /* font: var(--fonts-poppins); */
+  /* font-size: var(--input-font-size); */
+  background: var(--bodyfill-dark-primary-blue);
+  border-radius: 8px;
+  width: 100%;
+  /* color: var(--input-color); */
+  /* caret-color: var(--input-color); */
+  outline: none;
+  border: none;
+}
+
+.errorText {
+  font: var(--fonts-poppins);
+  margin-top: 4px;
+  color: var(--bodytext-warning-red);
+  font-size: 0.85rem;
+}

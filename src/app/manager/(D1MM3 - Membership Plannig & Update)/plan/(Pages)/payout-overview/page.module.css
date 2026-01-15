@@ -1,0 +1,68 @@
+.container {
+    background-image: url('/dashboard/screen.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: blur(12px);
+    overflow: visible;
+    backdrop-filter: blur(25px);
+    height: 100vh;
+    gap: var(--border-radius-large);
+    border-radius: var(--border-radius-large);
+}
+
+.containerWrapper {
+    background-color: var(--dark-green-50);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.mainArea {
+    flex: 1;
+    padding: 16px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.mainArea::-webkit-scrollbar {
+    display: none;
+}
+
+.payoutContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 8px;
+}
+
+.faqSection {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faqTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--pure-white);
+    margin: 0;
+}
+
+.loadingMessage {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--pure-white-50);
+    font-size: 15px;
+}
+
+.errorMessage {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--error-red, --warning-red);
+    font-size: 15px;
+}

@@ -1,0 +1,69 @@
+.formSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--border-radius);
+}
+
+.label {
+    color: var(--bodytext-pure-white);
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.optionalText {
+    color: var(--bodytext-very-light-gray);
+    font-size: var(--input-optional-font-size);
+    font-weight: 400;
+}
+
+.objectivesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--input-font-size);
+}
+
+.objectiveChip {
+    padding: var(--input-font-size) 16px;
+    background-color: var(--bodyfill-primary-blue-30);
+    border-radius: var(--border-radius);
+    color: var(--bodytext-pure-white);
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.objectiveChip:hover {
+    border-color: var(--border-primary-green);
+    background-color: var(--bodyfill-primary-blue-50);
+}
+
+.objectiveChip.selected {
+    background-color: var(--button-primary-green);
+    border-color: var(--button-primary-green);
+    color: var(--labels-off-black);
+}
+
+.objectiveChipSeeAll {
+    padding: var(--input-font-size) 16px;
+    background-color: transparent;
+    border: 2px dashed var(--border-primary-blue);
+    border-radius: var(--border-radius);
+    color: var(--bodytext-primary-blue);
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    grid-column: span 2;
+}
+
+.objectiveChipSeeAll:hover {
+    border-color: var(--border-primary-green);
+    color: var(--button-primary-green);
+}

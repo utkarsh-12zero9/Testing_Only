@@ -1,0 +1,278 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.label {
+    font-family: var(--font-Urbanist);
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--pure-white);
+    border-bottom: 1px solid var(--pure-white-20);
+}
+
+.optional {
+    font-size: 12px;
+    color: var(--pure-white-50);
+    margin-left: 4px;
+}
+
+.checkmarkSection {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--pure-white-20);
+    margin-bottom: 6px;
+}
+
+.checkmarkLabel {
+    font-family: var(--font-Urbanist);
+    font-size: 14px;
+    font-weight: 350;
+    color: var(--pure-white);
+}
+
+.infoSection {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.infoText {
+    font-family: var(--font-poppins);
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 1.4;
+    color: var(--pure-white);
+    margin: 0;
+}
+
+.uploadContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 16px;
+    border: 2px dashed var(--primary-blue-black-1);
+    border-radius: 12px;
+}
+
+.uploadContainerWithFiles {
+    border: 2px solid var(--primary-blue-black-1);
+}
+
+.orText {
+    font-family: var(--font-Urbanist);
+    font-size: 12px;
+    color: var(--pure-white);
+}
+
+.uploadLinkButton {
+    background-color: transparent;
+    color: var(--pure-white);
+    font-family: var(--font-Urbanist);
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block;
+    position: relative;
+}
+
+.galleryText {
+    color: var(--primary-green);
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.hiddenInput {
+    display: none;
+}
+
+.uploadedLayout {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    align-items: center;
+}
+
+.addMoreSection {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.filesGrid {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    overflow-x: auto;
+}
+
+.filePreviewGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.fileCard {
+    background-color: var(--primary-blue-50);
+    border: 2px solid var(--pure-white);
+    border-radius: 10px;
+    width: 150px;
+    height: 115px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.fileCardHeader {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.fileIcon {
+    color: var(--pure-white);
+    flex-shrink: 0;
+}
+
+.fileName {
+    font-family: var(--font-Urbanist);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--pure-white);
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.removeButton {
+    background-color: transparent;
+    border: none;
+    color: var(--pure-white);
+    font-size: 12px;
+    cursor: pointer;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.removeButton:hover {
+    color: var(--bodytext-warning-red);
+}
+
+.filePreview {
+    margin-top: 8px;
+    width: 100%;
+    background-color: var(--pure-white-30);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.previewIcon {
+    color: var(--pure-white);
+}
+
+.uploadProgressContent {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    padding: 6px 0;
+    flex: 1;
+    justify-content: center;
+}
+
+.uploadProgress {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.progressText {
+    font-size: 14px;
+}
+
+.progressInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-family: var(--font-Urbanist);
+    font-size: 9px;
+    color: var(--pure-white-70);
+}
+
+.progressBarContainer {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+}
+
+.progressBar {
+    flex: 1;
+    height: 4px;
+    background-color: var(--primary-blue-20);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background-color: var(--primary-green);
+    transition: width 0.3s ease;
+}
+
+.progressPercent {
+    font-family: var(--font-Urbanist);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary-green);
+    flex-shrink: 0;
+    min-width: 30px;
+    text-align: right;
+}
+
+.addMoreButton {
+    background-color: transparent;
+    color: var(--primary-green);
+    font-family: var(--font-Urbanist);
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.addMoreButton:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,33 @@
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.feature p {
+    color: var(--bodytext-pure-white);
+    font-family: var(--poppins);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-wrap: wrap
+}
+
+@media screen and (max-width : 426px) {
+    .feature {
+        padding: 0px 10px;
+    }
+
+    .feature img {
+        height: 11px;
+        width: 11px;
+    }
+
+    .feature p {
+        font-size: 10px;
+    }
+
+
+}

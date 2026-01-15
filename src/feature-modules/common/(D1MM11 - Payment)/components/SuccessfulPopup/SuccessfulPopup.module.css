@@ -1,0 +1,14 @@
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttons {
+  width: 100%;
+  padding-inline: 10%;
+  display: flex;
+  gap: 10px;
+}

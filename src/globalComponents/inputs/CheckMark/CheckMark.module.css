@@ -1,0 +1,31 @@
+.checkMark {
+  width: 26px;
+  height: 26px;
+  border: 1.5px solid var(--bodytext-pure-white);
+  border-radius: 5px;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  input {
+    display: none;
+  }
+
+  >img {
+    display: none;
+  }
+
+  &.checked {
+    background-color: var(--bodyfill-primary-blue, yellow) !important;
+
+    >img {
+      display: inline-block;
+    }
+  }
+
+  &.error {
+    border-color: var(--border-warning-red);
+  }
+}

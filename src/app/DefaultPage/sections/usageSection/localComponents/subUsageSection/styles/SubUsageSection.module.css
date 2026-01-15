@@ -1,0 +1,155 @@
+.subUsageSection {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  align-self: stretch;
+  width: 100%;
+  height: fit-content;
+}
+
+.verticalDivider {
+  height: 550px;
+  border-color: var(--transparent-overlay-primary-blue-50);
+}
+
+.metaData {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.titleBlock p {
+  font-family: var(--poppins);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--bodytext-pure-white);
+}
+
+.metaData h1 {
+  font-family: var(--urbanist);
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--bodytext-pure-white);
+}
+
+.fancyDividerBlock {
+  position: relative;
+  width: 100%;
+}
+
+.fancyDividerBlock hr {
+  width: 100%;
+  border-color: var(--bodyfill-primary-green);
+  border-width: 2px;
+}
+
+.fancyDividerBlock div {
+  position: absolute;
+  width: 50%;
+  height: 8px;
+  background-color: var(--bodyfill-primary-green);
+  transform: translateY(-25%);
+  top: 0px;
+  left: 0px;
+}
+
+.howItWorks {
+  font-family: var(--barlow);
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--bodytext-pure-white);
+}
+
+.workingList {
+  padding-left: 20px;
+}
+
+.work p {
+  font-family: var(--poppins);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--transparent-overlay-pure-white-50);
+}
+
+.work p span {
+  font-weight: 700;
+  color: var(--bodytext-pure-white);
+}
+
+.work::marker {
+  color: var(--bodytext-pure-white);
+}
+
+@media screen and (max-width: 426px) {
+  .subUsageSection {
+    flex-direction: column;
+  }
+
+  .verticalDivider {
+    display: none;
+  }
+
+  .metaData {
+    gap: 1rem;
+  }
+
+  .subUsageSection img {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .titleBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .titleBlock p {
+    font-family: var(--poppins);
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .metaData h1 {
+    font-family: var(--urbanist);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .howItWorks {
+    font-family: var(--barlow);
+    font-size: 0.875rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .work p {
+    font-family: var(--poppins);
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

@@ -1,0 +1,190 @@
+.container {
+    background-image: url('/dashboard/screen.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: blur(12px);
+    overflow: visible;
+    height: 100vh;
+    gap: var(--border-radius-large);
+    backdrop-filter: blur(25px);
+    border-radius: var(--border-radius-large);
+}
+
+.containerWrapper {
+    background-color: var(--dark-green-50);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainArea {
+    flex: 1;
+    padding: 16px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.trainerCard {
+    background-color: var(--primary-blue-20);
+    border-radius: var(--border-radius-large);
+    padding: 20px 8px;
+    padding-bottom: 10vh;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    gap: 10px;
+    backdrop-filter: blur(36px);
+}
+
+.cardHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 5px;
+}
+
+.cardTitle {
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 350;
+    color: var(--pure-white);
+    font-style: normal;
+}
+
+.cardDescription {
+    padding-top: 8px;
+    font-size: 10px;
+    color: var(--pure-white);
+    font-weight: 200;
+    line-height: 1.4;
+    font-style: normal;
+    border-top: 1px solid var(--pure-white-50);
+}
+
+.slotsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 27vh;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.slotsContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.slot {
+    height: 75px;
+    border: 2px dashed var(--primary-blue);
+    background-color: var(--primary-blue-30);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.slot:hover {
+    background-color: var(--primary-blue-50);
+    border-color: var(--primary-blue);
+}
+
+.lockedSlot {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.footerNote {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 5px;
+    font-style: normal;
+
+    p {
+        color: var(--pure-white);
+        font-size: 12px;
+        font-weight: 200;
+    }
+}
+
+.infoIcon {
+    min-width: 16px;
+    color: var(--pure-white);
+}
+
+.nextButtonContainer {
+    margin-top: 12px;
+    padding: 0 5px;
+}
+
+.nextButton {
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Bottom Popup Styles */
+.popupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: flex-end;
+}
+
+.bottomPopup {
+    width: 100%;
+    height: 65vh;
+    background-color: var(--primary-blue-30);
+    backdrop-filter: blur(50px);
+    border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+    overflow-y: auto;
+    animation: slideUp 0.3s ease-out;
+}
+
+.popupContent {
+    padding: 20px;
+    color: var(--pure-white);
+}
+
+.popupContent h3 {
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 350;
+    margin-bottom: 10px;
+}
+
+.popupContent p {
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 200;
+    margin-bottom: 8px;
+}
+
+/* Slide up animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}

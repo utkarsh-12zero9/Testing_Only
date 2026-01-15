@@ -1,0 +1,43 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .bellButton {
+    position: relative;
+    width: 28px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #F4F4F44D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      position: absolute;
+      top: 2px;
+      left: 12px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 8px;
+      color: var(--bodytext-pure-white);
+      background-color: #55A6C4;
+    }
+  }
+
+  .hamburgorButton {
+    width: 24px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 14px;
+    }
+  }
+}

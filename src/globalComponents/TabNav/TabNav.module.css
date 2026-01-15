@@ -1,0 +1,48 @@
+.container {
+  background: var(--bodyfill-primary-blue-30);
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  overflow: auto;
+  scrollbar-color: var(--bodyfill-dark-green) transparent;
+  scrollbar-width: thin;
+}
+
+.tabButton {
+  flex-shrink: 0;
+  border-radius: 4px;
+  white-space: nowrap;
+  padding: 12px 20px;
+  font: var(--font-poppins);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--bodytext-off-white);
+  cursor: pointer;
+
+  &.active {
+    font-weight: 600;
+    background: var(--bodyfill-light-blue-10);
+    color: var(--bodyfill-dark-green);
+    cursor: auto;
+  }
+
+  &:first-child {
+    margin-left: auto;
+  }
+
+  &:last-child {
+    margin-right: auto;
+  }
+}
+
+.divider {
+  flex-shrink: 0;
+  width: 1.5px;
+  height: 30px;
+  background-color: var(--bodyfill-dark-green);
+}

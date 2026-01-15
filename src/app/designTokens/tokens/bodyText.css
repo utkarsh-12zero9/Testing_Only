@@ -1,0 +1,39 @@
+.body-text-chinese-black {
+    color: var(--chinese-black)
+}
+
+.body-text-dark-gray {
+    color: var(--dark-gray)
+}
+
+.body-text-gray {
+    color: var(--gray)
+}
+
+.body-text-light-gray {
+    color: var(--light-gray)
+}
+
+.body-text-very-light-gray {
+    color: var(--very-light-gray)
+}
+
+.body-text-off-white {
+    color: var(--off-white)
+}
+
+.body-text-pure-white {
+    color: var(--pure-white)
+}
+
+.body-text-primary-green {
+    color: var(--primary-green)
+}
+
+.body-text-primary-blue {
+    color: var(--primary-blue)
+}
+
+.body-text-warning-red {
+    color: var(--warning-red)
+}

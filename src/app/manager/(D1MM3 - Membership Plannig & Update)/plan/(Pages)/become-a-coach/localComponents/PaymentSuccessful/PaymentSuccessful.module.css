@@ -1,0 +1,108 @@
+.overlay {
+    position: fixed;
+    padding: 0 4px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bodyfill-black-2);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 10000;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.popup {
+    width: 100%;
+    max-width: 350px;
+    background-color: var(--bodyfill-primary-blue-50);
+    border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+    padding: 32px 20px 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.iconContainer {
+    width: 50px;
+    height: 50px;
+    background-color: var(--button-primary-green);
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--labels-off-black);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--headings-primary-green-white);
+    margin: 0;
+    font-style: italic;
+    text-align: center;
+}
+
+.divider {
+    width: 100%;
+    max-width: 310px;
+    height: 2px;
+    background-color: var(--border-primary-blue-50);
+}
+
+.message {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--bodytext-very-light-gray);
+    text-align: center;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.doneButton {
+    width: 100%;
+    max-width: 280px;
+    padding: 12px 24px;
+    margin-top: 8px;
+    background-color: var(--button-primary-green);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--labels-off-black);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.doneButton:hover {
+    filter: brightness(0.9);
+}

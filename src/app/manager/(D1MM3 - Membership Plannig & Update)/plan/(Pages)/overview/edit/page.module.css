@@ -1,0 +1,302 @@
+.container {
+    background-image: url('/dashboard/screen.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: blur(12px);
+    overflow: visible;
+    height: 100vh;
+    gap: var(--border-radius-large);
+    backdrop-filter: blur(25px);
+    border-radius: var(--border-radius-large);
+}
+
+.containerWrapper {
+    background-color: var(--dark-green-50);
+}
+
+.mainArea {
+    height: calc(100vh - 60px);
+    padding: 16px var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-y: auto;
+}
+
+.formContainer {
+    background-color: var(--primary-blue-30);
+    backdrop-filter: blur(50px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px var(--border-radius);
+    border-radius: var(--border-radius-large);
+}
+
+.formSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--border-radius);
+}
+
+.label {
+    color: var(--bodytext-pure-white);
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.optionalText {
+    color: var(--bodytext-very-light-gray);
+    font-size: var(--input-optional-font-size);
+    font-weight: 400;
+}
+
+.input {
+    width: 100%;
+    padding: var(--input-font-size) 16px;
+    background-color: var(--bodyfill-primary-blue-30);
+    border: 2px solid var(--border-primary-blue);
+    border-radius: var(--border-radius);
+    color: var(--bodytext-off-white);
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.input::placeholder {
+    color: var(--bodytext-very-light-gray);
+}
+
+.input:focus {
+    border-color: var(--border-primary-green);
+    background-color: var(--bodyfill-primary-blue-50);
+}
+
+.objectivesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--input-font-size);
+}
+
+.objectiveChip {
+    padding: var(--input-font-size) 16px;
+    background-color: var(--bodyfill-primary-blue-30);
+    border: 2px solid var(--border-primary-blue);
+    border-radius: var(--border-radius);
+    color: var(--bodytext-pure-white);
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.objectiveChip:hover {
+    border-color: var(--border-primary-green);
+    background-color: var(--bodyfill-primary-blue-50);
+}
+
+.objectiveChip.selected {
+    background-color: var(--button-primary-green);
+    border-color: var(--button-primary-green);
+    color: var(--labels-off-black);
+}
+
+.objectiveChipSeeAll {
+    padding: var(--input-font-size) 16px;
+    background-color: transparent;
+    border: 2px dashed var(--border-primary-blue);
+    border-radius: var(--border-radius);
+    color: var(--bodytext-primary-blue);
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    grid-column: span 2;
+}
+
+.objectiveChipSeeAll:hover {
+    border-color: var(--border-primary-green);
+    color: var(--button-primary-green);
+}
+
+.customDropdown {
+    position: relative;
+    width: 100%;
+}
+
+.dropdownTrigger {
+    width: 100%;
+    padding: var(--input-font-size) 16px;
+    background-color: var(--bodyfill-primary-blue-30);
+    border: 2px solid var(--border-primary-blue);
+    border-radius: var(--border-radius);
+    color: var(--bodytext-off-white);
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdownTrigger:hover {
+    background-color: var(--bodyfill-primary-blue-50);
+}
+
+.dropdownMenu {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.dropdownMenu::-webkit-scrollbar {
+    width: 4px;
+}
+
+.dropdownMenu::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.dropdownMenu::-webkit-scrollbar-thumb {
+    background: var(--primary-blue);
+    border-radius: 4px;
+}
+
+.dropdownItem {
+    padding: var(--input-font-size) 16px;
+    background-color: var(--bodyfill-primary-blue-30);
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    color: var(--bodytext-pure-white);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dropdownItem:hover {
+    background-color: var(--bodyfill-primary-blue-50);
+}
+
+.dropdownItem.selected {
+    border-color: var(--border-primary-green);
+    background-color: var(--bodyfill-primary-blue-50);
+}
+
+.featureCount {
+    font-size: 10px;
+    color: var(--bodytext-very-light-gray);
+    margin-left: 4px;
+}
+
+.objectivesExpanded {
+    background-color: var(--bodyfill-primary-blue-30);
+    backdrop-filter: blur(50px);
+    border-radius: var(--border-radius);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.objectivesExpandedHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.objectivesExpandedHeader h3 {
+    color: var(--headings-pure-white);
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.closeButton {
+    background: transparent;
+    border: none;
+    color: var(--bodytext-pure-white);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closeButton:hover {
+    opacity: 0.7;
+}
+
+.objectivesScrollable {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--input-font-size);
+    max-height: 550px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.objectivesScrollable::-webkit-scrollbar {
+    width: 4px;
+}
+
+.objectivesScrollable::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.objectivesScrollable::-webkit-scrollbar-thumb {
+    background: var(--primary-blue);
+    border-radius: 4px;
+}
+
+.selectedButton {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--button-primary-green);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--labels-off-black);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.selectedButton:hover {
+    filter: brightness(0.9);
+}
+
+.bottomNavWrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0 0 0;
+    background: linear-gradient(to bottom, var(--off-black) 0%, var(--off-black) 100%);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* Custom popup styling - increase button width */
+.customPopup :global(button) {
+    width: 85%;
+}

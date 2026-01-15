@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pontano+Sans:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.heading {
+  text-align: center;
+  color: var(--bodytext-pure-white);
+  width: 374px;
+  height: 89px;
+  border-bottom: 0.1px solid var(--pure-white-50);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  h2 {
+    height: 48px;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+
+  span {
+    font: var(--fonts-barlow);
+    font-size: 40px;
+    margin-bottom: 8px;
+  }
+
+  span.highlight {
+    color: var(--headings-primary-green-white);
+  }
+
+  p {
+    height: 21px;
+    font: var(--fonts-poppins);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+}

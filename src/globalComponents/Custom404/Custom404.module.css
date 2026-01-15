@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+    text-align: center;
+}
+
+.logo{
+    height: 12vw;
+    width: 12vw;
+    margin-bottom: 2vw;
+}
+
+.title {
+    font-family: Urbanist;
+    font-weight: 700;
+    font-size: 3vw; /* 56px to vw (assuming 1000px viewport width) */
+    line-height: 3.72vw; /* 67.2px to vw */
+    letter-spacing: 0%;
+    color: rgba(255, 255, 255, 1);
+}
+
+.message {
+    font-family: Barlow Semi Condensed;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 2vw; /* 36px to vw */
+    color: rgba(255, 255, 255, 1);
+    line-height: 3.32vw; /* 43.2px to vw */
+    letter-spacing: 0%;
+}
+
+.backLink {
+    margin-top: 2vw;
+    width: 25.4vw; /* 344px to vw */
+    background-color: rgba(184, 254, 34, 1);
+    height: 4.5vw; /* 45px to vw */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.8vw; /* 8px to vw */
+    text-decoration: none;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 1.4vw; /* 14px to vw */
+    line-height: 2.1vw; /* 21px to vw */
+    letter-spacing: 0%;
+    cursor: pointer;
+    color: rgba(18, 18, 18, 1);
+}
+
+.backLink:hover {
+    background-color: rgba(184, 254, 34, 0.879);
+}

@@ -1,0 +1,42 @@
+.label {
+  /* color: var(--input-color); */
+  /* font: var(--fonts-poppins); */
+  /* font-size: var(--input-font-size); */
+  font-style: normal;
+  font-weight: normal;
+}
+
+.timeSlotContainer {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 8px;
+  color: var(--input-color);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+
+  button {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+  button img {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+
+.errorText {
+  font: var(--fonts-poppins);
+  margin-top: 4px;
+  color: var(--bodytext-warning-red);
+  font-size: 0.85rem;
+}

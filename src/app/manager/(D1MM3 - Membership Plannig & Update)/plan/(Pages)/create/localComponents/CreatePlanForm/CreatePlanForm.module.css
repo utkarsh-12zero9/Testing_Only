@@ -1,0 +1,283 @@
+.formContainer {
+    background-color: var(--primary-blue-30);
+    backdrop-filter: blur(50px);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 20px 8px;
+    border-radius: var(--border-radius-large);
+    padding-bottom: 90px;
+    width: 100%;
+    min-height: 550px;
+    overflow-y: auto;
+}
+
+.formContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.formSection {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+.label {
+    color: var(--bodytext-pure-white);
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.optionalText {
+    color: var(--bodytext-very-light-gray);
+    font-size: var(--input-optional-font-size);
+    font-weight: 400;
+}
+
+.objectivesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px;
+}
+
+.objectiveChip {
+    padding: var(--input-font-size) 16px;
+    background-color: var(--bodyfill-primary-blue-30);
+    border-radius: var(--border-radius);
+    color: var(--bodytext-pure-white);
+    font-size: var(--input-font-size);
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.objectiveChip:hover {
+    border-color: var(--border-primary-green);
+    background-color: var(--bodyfill-primary-blue-50);
+}
+
+.objectiveChip.selected {
+    border: 1px solid var(--button-primary-green);
+    color: var(--headings-primary-green-white);
+}
+
+.objectiveChipSeeAll {
+    padding: var(--input-font-size) 16px;
+    border: 2px solid var(--border-primary-blue);
+    border-radius: var(--border-radius);
+    color: var(--bodytext-pure-white);
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    margin-top: 0;
+}
+
+.objectiveChipSeeAll:hover {
+    background-color: var(--bodyfill-primary-blue-50);
+    border-color: var(--border-primary-green);
+}
+
+.selectedFeaturesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.selectedFeatureChip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background-color: var(--bodyfill-primary-blue-30);
+    border: 1px solid var(--border-primary-green);
+    border-radius: var(--border-radius);
+    color: var(--bodytext-pure-white);
+    font-size: var(--input-font-size);
+    font-weight: 400;
+}
+
+.removeFeatureBtn {
+    background: none;
+    border: none;
+    color: var(--bodytext-pure-white);
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.removeFeatureBtn:hover {
+    color: var(--border-warning-red);
+    transform: scale(1.2);
+}
+
+
+.payoutSection {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.payoutTitle {
+    font: var(--fonts-poppins);
+    font-size: var(--input-font-size);
+    color: var(--bodytext-pure-white);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+.payoutDescription {
+    color: var(--bodytext-very-light-gray);
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 4px;
+    line-height: 1.5;
+}
+
+.membershipTypeWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.membershipTypeWrapper :global(.grid-cols-3) {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px;
+}
+
+.onlinePaymentSection {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 12px;
+}
+
+.onlinePaymentTitle {
+    color: var(--bodytext-pure-white);
+    font: var(--fonts-poppins);
+    font-size: var(--input-font-size);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+.disclaimer {
+    color: var(--bodytext-pure-white);
+    font-size: 8px;
+    font-weight: 300;
+    margin: 0;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.disclaimer strong {
+    color: var(--bodytext-pure-white);
+    font-weight: 600;
+    opacity: 1;
+}
+
+.checkboxGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    color: var(--bodytext-pure-white);
+    font-size: var(--input-font-size);
+    line-height: 1.5;
+}
+
+.checkbox {
+    background: var(--bodyfill-primary-blue-30);
+    min-width: 20px;
+    min-height: 20px;
+    margin-top: 0;
+    cursor: pointer;
+    accent-color: var(--primary-blue);
+    border-radius: var(--border-radius-large);
+}
+
+.checkboxText {
+    font-size: var(--input-font-size);
+    color: var(--bodytext-pure-white);
+    font-weight: 300;
+}
+
+.infoBox {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    margin-top: 8px;
+}
+
+.infoIcon {
+    color: var(--bodytext-pure-white);
+    font-size: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid var(--bodytext-pure-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.infoText {
+    color: var(--bodytext-pure-white);
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.saveButton {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--button-primary-green);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--labels-off-black);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 12px;
+}
+
+.saveButton:hover {
+    filter: brightness(0.95);
+}
+
+.saveButton:active {
+    transform: scale(0.98);
+}

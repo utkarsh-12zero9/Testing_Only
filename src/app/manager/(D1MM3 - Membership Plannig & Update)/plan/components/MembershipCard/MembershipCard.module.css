@@ -1,0 +1,190 @@
+.card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    border-radius: var(--border-radius);
+    background: linear-gradient(135deg, var(--bodyfill-primary-blue-30) 0%, rgba(40, 90, 110, 0.8) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    position: relative;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.card:hover {
+    background: linear-gradient(135deg, rgba(85, 166, 196, 0.7) 0%, rgba(60, 120, 140, 0.9) 100%);
+    border-color: var(--border-primary-blue);
+}
+
+.iconCircle {
+    width: 40px;
+    height: 40px;
+    background-color: var(--bodyfill-primary-blue-50);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+    min-width: 0;
+}
+
+.topRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.planInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+    min-width: 0;
+}
+
+.planName {
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--bodytext-pure-white);
+    margin: 0;
+    line-height: 1.1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin: 0;
+    flex-wrap: nowrap;
+}
+
+.currency {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--bodytext-primary-green);
+    line-height: 1;
+}
+
+.priceLabel {
+    font-size: 8px;
+    color: var(--bodytext-primary-green);
+    font-weight: 400;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.statusRow {
+    margin-top: 4px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--border-pure-white);
+    gap: 2px;
+    width: 100%;
+    flex-wrap: wrap;
+    font-size: 9px;
+    color: var(--bodytext-pure-white);
+}
+
+.status {
+    font-size: 9px;
+    font-weight: 600;
+    padding: 0;
+    background: none;
+    white-space: nowrap;
+    margin: 0;
+    line-height: 1;
+}
+
+.otherStatus {
+    font-size: 9px;
+    font-weight: 300;
+    padding: 0;
+    background: none;
+    white-space: nowrap;
+    margin: 0;
+    line-height: 1;
+}
+
+.separator {
+    color: var(--primary-blue-white-2);
+    font-weight: 300;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.dot {
+    color: var(--bodytext-primary-green);
+    font-weight: 300;
+}
+
+.statusUpcoming {
+    color: var(--bodytext-pure-white);
+}
+
+.statusActive {
+    color: var(--bodytext-primary-green);
+}
+
+.statusExpired {
+    color: var(--bodytext-warning-red);
+}
+
+.activateButton,
+.upgradeButton {
+    background-color: var(--button-primary-green);
+    color: var(--labels-off-black);
+    border: 2px solid var(--border-primary-green);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.activateButton:hover,
+.upgradeButton:hover {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    outline: 3px solid var(--labels-off-black);
+    outline-offset: -4px;
+}
+
+.renewButton {
+    background-color: var(--button-warning-red);
+    color: var(--bodytext-pure-white);
+    border: 2px solid var(--border-warning-red);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.renewButton:hover {
+    background-color: var(--warning-red);
+    border-color: var(--warning-red);
+    outline: 3px solid var(--labels-off-black);
+    outline-offset: -4px;
+}

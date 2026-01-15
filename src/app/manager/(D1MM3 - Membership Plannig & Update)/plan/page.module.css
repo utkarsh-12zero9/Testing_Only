@@ -1,0 +1,53 @@
+.container {
+    background-image: linear-gradient(to bottom, var(--transparent-overlay-primary-blue-30) 0%, var(--transparent-overlay-primary-blue-30) 100%), url('/plan/planBg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: calc(80% + 20px) center;
+    overflow: hidden;
+    height: 100vh;
+    gap: 15px;
+    backdrop-filter: blur(25px);
+    border-radius: var(--border-radius-large);
+}
+
+.containerWrapper {
+    background-color: var(--background-blur-green);
+    height: 100vh;
+}
+
+.mainArea {
+    height: calc(100vh - 60px);
+    padding: 16px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.line {
+    width: 100%;
+    max-width: 324px;
+    height: 0;
+    border: none;
+    border-top: 1.5px solid var(--primary-blue-50);
+    margin: 0 auto;
+}
+
+.bottomNavWrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0 0 0;
+    background: linear-gradient(to bottom, var(--off-black) 0%, var(--off-black) 100%);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}

@@ -1,0 +1,86 @@
+.popupContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  padding: 32px 16px;
+  gap: 16px;
+  background: var(--primary-blue-50);
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 8px 32px var(--bodyfill-black-2);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.closeIcon {
+  width: 24px;
+  height: 24px;
+  stroke: var(--primary-green);
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.heading {
+  font-family: var(--barlow);
+  font-weight: 700;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--pure-white);
+}
+
+.description {
+  font-family: var(--poppins);
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 1.2;
+  color: var(--very-light-gray);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form :global(.inputBox),
+.form :global(.dropdownButton),
+.form :global(.textAreaBox) {
+  background: rgba(47, 91, 108, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+}
+
+.form :global(label) {
+  font-size: 14px !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  margin-bottom: 8px !important;
+}
+
+.form :global(.optionalText) {
+  font-size: 10px !important;
+  opacity: 0.6;
+}
+
+.submitBtn {
+  width: 100% !important;
+  margin-top: 8px;
+}

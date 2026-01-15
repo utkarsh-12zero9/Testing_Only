@@ -1,0 +1,225 @@
+.card {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--border-dark-blue);
+    backdrop-filter: blur(25px);
+    width: 368px;
+
+}
+
+.cardTitleBlock {
+    display: flex;
+    padding: 10px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: var(--transparent-overlay-primary-blue-30);
+    backdrop-filter: blur(25px);
+}
+
+.cardTitle {
+    width: 100%;
+}
+
+.cardTitle h1 {
+    font-family: var(--barlow);
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--bodytext-pure-white);
+}
+
+.cardTitle h4 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--barlow);
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--bodytext-primary-green);
+}
+
+.recommended {
+    color: var(--Body-Text-Primary-Green, var(--primary-green));
+    text-align: center;
+    /* Mobile App/S1 - Poppins Medium 16 px */
+    font-family: var(--poppins);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.cardTitle h4 span {
+    overflow: hidden;
+    color: var(--bodytext-primary-green);
+    text-overflow: ellipsis;
+    font-family: var(--pontano);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.cardTitle h4 p {
+    color: var(--bodytext-pure-white);
+    font-family: var(--poppins);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.type {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.type p {
+    color: var(--bodytext-pure-white);
+    text-align: center;
+    /* Mobile App/H1 - Barlow Semi Condesened Italic Bold 25 px */
+    font-family: var(--barlow);
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.verticalDivider {
+    height: 22px;
+    border-color: var(--transparent-overlay-primary-blue-50);
+    /* transform: rotate(-90deg); */
+    /* flex: 1 0 0; */
+}
+
+.type h4 {
+    color: var(--bodytext-primary-green);
+    /* Mobile App/P1 - Poppins Semi-Bold 14px */
+    font-family: var(--poppins);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.divider {
+    stroke-width: 1.5px;
+    height: 0px;
+    align-self: stretch;
+    border-color: var(--transparent-overlay-primary-blue-50);
+    padding: 0px 10px;
+}
+
+.keyFeaturesTitle {
+    color: var(--bodytext-pure-white);
+    width: 100%;
+    text-align: start;
+    font-family: var(--poppins);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.featuresBlock {
+    display: flex;
+    padding: 8px 0px;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 14px;
+    background: var(--bodyfill-dark-green);
+}
+
+.featureList {
+    display: flex;
+    height: 300px;
+    width: 284px;
+    padding: 8px 3px 8px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1 0 0;
+}
+
+@media screen and (max-width : 426px) {
+    .card {
+        display: flex;
+        width: 200px;
+        padding: 5.603px;
+        flex-direction: column;
+        align-items: center;
+        gap: 5.603px;
+    }
+
+    .cardTitleBlock {
+        padding: 5px 11px;
+    }
+
+
+    .cardTitle h1 {
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .cardTitle h4 {
+        font-size: 25.213px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+    }
+
+    .cardTitle h4 span {
+        font-size: 14.007px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .cardTitle h4 p {
+        font-size: 8.965px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .type p {
+        font-size: 14.007px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .type h4 {
+        font-size: 7.844px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .keyFeaturesTitle {
+        font-size: 10px;
+    }
+
+    .featureList {
+        height: 168px;
+        overflow: scroll;
+
+    }
+}

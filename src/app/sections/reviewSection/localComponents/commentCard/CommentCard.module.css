@@ -1,0 +1,73 @@
+.comment{
+    display: flex;
+    width: 636px;
+    height: 76px;
+    max-height: 650px;
+    padding: 15px 10px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: var(--transparent-overlay-primary-blue-30);
+    backdrop-filter: blur(25px);
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    flex: 1 0 0;
+}
+
+.rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.rating div{
+    display: flex;
+    gap: 4px;
+}
+
+.commentText{
+    font-family: var(--poppins);
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.commentMetadata{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+     color: var(--body-text-very-light-gray);
+}
+
+.commentMetadata p {
+    font-family: var(--poppins);
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.commentMetadata h4{
+    font-family: var(--poppins);
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--bodytext-very-off-white);
+   
+}
+
+@media screen and (max-width: 426px){
+    .comment{
+        width: 95%;
+        height: fit-content;
+    }
+}

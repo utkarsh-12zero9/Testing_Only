@@ -1,0 +1,74 @@
+.serviceCard {
+  display: flex;
+  height: 310px;
+  min-width: 252px;
+  padding: 40px 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  /* flex: 1 0 0; */
+  border-radius: 15px;
+  background-color: var(--bodyfill-dark-green);
+}
+
+.serviceCard .text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  /* align-self: stretch; */
+}
+
+.serviceCard .text h1 {
+  font-family: var(--poppins);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  /* 100% */
+  color: var(--bodytext-pure-white);
+}
+
+.serviceCard .text p {
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 24px */
+  color: var(--transparent-overlay-pure-white-50);
+}
+
+@media screen and (max-width: 426px) {
+  .serviceCard {
+    display: flex;
+    width: 149px;
+    height: 190px;
+    padding: 27.778px 16.667px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16.667px;
+  }
+
+  .serviceCard img {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+
+  .serviceCard .text h1 {
+    font-family: var(--poppins);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .serviceCard .text p {
+    font-family: var(--poppins);
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

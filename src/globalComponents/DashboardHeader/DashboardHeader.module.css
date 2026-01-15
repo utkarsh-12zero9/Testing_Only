@@ -1,0 +1,47 @@
+
+.header {
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+  opacity: 1;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.header > .headerDiv {
+  width: 50%;
+  color: var(--bodytext-pure-white);
+}
+
+.header .name {
+  font: var(--fonts-poppins);
+  /* font-weight: 400; */
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.header .tagline {
+  font: var(--fonts-barlow);
+  /* font-weight: 700; */
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.header .tagline > span {
+  color: var(--bodytext-primary-green);
+}
+
+.profilePicture {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.logout {
+  width: 30%;
+}

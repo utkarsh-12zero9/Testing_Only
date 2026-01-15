@@ -1,0 +1,84 @@
+.filledSlot {
+    height: 75px;
+    border: 2px solid var(--primary-blue);
+    background-color: var(--primary-blue-30);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filledSlotSelected {
+    border: 2px solid var(--primary-green) !important;
+    border-style: solid !important;
+}
+
+.filledSlotSelected .iconContainer {
+    border: 2px solid var(--primary-green);
+}
+
+.iconContainer {
+    width: 48px;
+    height: 48px;
+    border-radius: 6px;
+    background-color: var(--primary-blue-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.userIcon {
+    color: var(--pure-white);
+    height: 100%;
+    width: 100%;
+}
+
+.details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.trainerName {
+    font-family: var(--font-Urbanist);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--pure-white);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.metaInfo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-Urbanist);
+}
+
+.role {
+    color: var(--pure-white);
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.expertise {
+    color: var(--primary-green);
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    padding-left: 6px;
+    border-left: 2px solid var(--primary-blue);
+}
+
+.arrow {
+    color: var(--pure-white);
+    flex-shrink: 0;
+}

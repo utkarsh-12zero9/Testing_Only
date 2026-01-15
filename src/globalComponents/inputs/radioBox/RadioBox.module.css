@@ -1,0 +1,45 @@
+.radioBox {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.radioBox label {
+  /* font: var(--fonts-poppins); */
+  /* font-size: var(--input-font-size); */
+  /* color: var(--input-color); */
+  cursor: pointer;
+}
+
+.button {
+  border-radius: var(--border-radius);
+  gap: 10px;
+  opacity: 1;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: var(--bodyfill-dark-primary-blue);
+  cursor: pointer;
+  border: 1.5px solid var(--bodyfill-dark-primary-blue);
+  overflow-wrap: break-word;
+  label {
+    width: 100%;
+  }
+
+}
+
+.selectedButton {
+  border: 1.5px solid var(--border-primary-green);
+}
+
+
+.errorText {
+  font: var(--fonts-poppins);
+  margin-top: 4px;
+  color: var(--bodytext-warning-red);
+  font-size: 0.85rem;
+}
+
+.radio [data-state='checked'] > span {
+  background-color: var(--primary-green) !important;
+}

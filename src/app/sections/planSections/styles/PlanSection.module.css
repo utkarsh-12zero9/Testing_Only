@@ -1,0 +1,145 @@
+.planSection {
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.overlay {
+  display: flex;
+  width: 80.333vw;
+  /* 1200px to vw */
+  padding: 80px 40px 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: var(--dark-green-80);
+}
+
+.planSectionTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.planSectionTitle h1 {
+  font-family: var(--urbanist);
+  font-size: 142px;
+  font-style: normal;
+  font-weight: 700;
+  /* color: var(--transparent-overlay-off-white-30); */
+  color: var(--transparent-overlay-pure-white-50);
+}
+
+.planSectionTitle>p {
+  font-family: var(--urbanist);
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  position: absolute;
+  bottom: 0;
+  text-wrap: nowrap;
+  color: var(--bodytext-pure-white);
+}
+
+.planSectionTitle p span {
+  color: var(--bodytext-primary-green);
+  font: inherit;
+}
+
+.description {
+  font-family: var(--poppins);
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--bodyfill-off-white);
+  text-align: center;
+}
+
+.divider {
+  border: none;
+  height: 1.5px;
+  width: 100%;
+  background-color: var(--transparent-overlay-primary-blue-50);
+  margin: 0;
+}
+
+.planList {
+  display: flex;
+  width: 100%;
+  gap: 1.875rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  padding-bottom: 15px;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.planList::-webkit-scrollbar {
+  display: none;
+}
+
+.planList>* {
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 520px) {
+  .planSection {
+    width: 90%;
+    border-radius: 18px;
+  }
+
+  .overlay {
+    width: 100%;
+    padding: 25px 20px;
+    gap: 10px;
+
+  }
+
+  .planSectionTitleBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .planSectionTitle {
+    width: 100vw;
+  }
+
+  .planSectionTitle h1 {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .description {
+    font-family: var(--poppins);
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 80%;
+  }
+
+  .planSectionTitle>p {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .divider {
+    width: 90%;
+  }
+
+  .planList {
+    gap: 10px;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+}

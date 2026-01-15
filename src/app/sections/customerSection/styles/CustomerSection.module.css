@@ -1,0 +1,175 @@
+.customer {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.customer:nth-child(1) {
+  width: 80.333vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.customerTitle {
+  display: flex;
+  flex-direction: column;
+  padding-left: 135px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  padding: 0px;
+}
+
+.customerTitleText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: -200px;
+  position: relative;
+  width: 63.75vw;
+}
+
+.customerTitleText h1 {
+  font-family: var(--urbanist);
+  font-size: 142px;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--transparent-overlay-off-white-30);
+}
+
+.customerTitle p {
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--bodytext-off-white);
+  text-align: center;
+  width: 100%;
+}
+
+.customerTitleText>p {
+  font-family: var(--urbanist);
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  position: absolute;
+  bottom: 0;
+  color: var(--bodytext-pure-white);
+  white-space: nowrap;
+}
+
+.customerTitle p span {
+  color: var(--bodytext-primary-green);
+  font: inherit;
+}
+
+.divider {
+  stroke-width: 1.5px;
+  height: 0;
+  width: 90%;
+  border-color: var(--transparent-overlay-primary-blue-50);
+}
+
+.customerList {
+  display: flex;
+  align-items: stretch;
+  gap: 3.125rem;
+  overflow-x: scroll;
+  width: 100%;
+}
+
+
+.cardHolder {
+  flex: 1;
+  display: flex;
+}
+
+@media screen and (max-width: 920px) {
+  .customer {
+    padding: 0 10px;
+    width: 91.667vw;
+    border-radius: 11px;
+    gap: 10px;
+  }
+
+  .customer:nth-child(1) {
+    width: 100%;
+    display: flex;
+    padding: 28.611px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8.583px;
+  }
+
+  .sliderButtonWeb {
+    display: none;
+  }
+
+  .divider {
+    width: 90%;
+  }
+
+  .customerTitle {
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+    padding: 0px 20px;
+  }
+
+  .customerTitleBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .customerTitleText {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .customerTitleText h1 {
+    font-family: var(--urbanist);
+    font-size: 16vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .customerTitle p {
+    font-family: var(--poppins);
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 80%;
+    color: var(--bodytext-off-white)
+  }
+
+  .customerTitleText>p {
+    font-family: var(--urbanist);
+    font-size: 5vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+  .customerList {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    gap: 1rem;
+  }
+
+  .sliderButtonMobile {
+    display: flex;
+  }
+}

@@ -1,0 +1,127 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 8px;
+  padding: 10px 15px;
+  gap: 5px;
+  background-color: var(--transparent-overlay-primary-blue-30);
+}
+
+.icon {
+  width: 12px;
+  height: 11px;
+  color: var(--bodytext-pure-white);
+}
+
+.iconWrapper {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  padding: 6.5px 6px;
+  gap: 10px;
+  background-color: var(--transparent-overlay-primary-blue-50);
+  display: flex;
+  flex-direction: row;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  gap: 5px;
+}
+
+.title {
+  width: 61px;
+  height: 18px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--bodytext-pure-white);
+}
+
+.ruppeeLogo {
+  font-family: var(--pontano);
+  width: 10px;
+  height: 36px;
+  font-weight: 500;
+  font-size: 16px;
+  vertical-align: bottom;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--bodytext-primary-green);
+}
+
+.cost {
+  width: fit-content;
+  height: fit-content;
+  font-family: var(--barlow);
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 100%;
+  color: var(--bodytext-primary-green);
+  letter-spacing: 0%;
+}
+
+.perText {
+  width: 40px;
+  height: 24px;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 100%;
+  vertical-align: bottom;
+  color: var(--bodytext-very-light-gray);
+  letter-spacing: 0%;
+}
+
+.perTextContainer {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  height: 36px;
+  padding: 5px 0;
+  gap: 10px;
+}
+
+.priceSection {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  height: fit-content;
+  gap: 3px;
+}
+
+.divider {
+  width: 100%;
+  height: 0;
+  border-width: 1px;
+  border-color: var(--transparent-overlay-primary-blue-50);
+}
+
+.description {
+  width: fit-content;
+  height: fit-content;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--bodytext-very-light-gray);
+}
+
+.descriptionSection {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  height: fit-content;
+  gap: 5px;
+}
+
+.customText {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--bodytext-pure-white);
+}

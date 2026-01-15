@@ -1,0 +1,78 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bodyfill-black-2);
+    z-index: var(--popup-layer);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.popup {
+    width: 100%;
+    max-width: 650px;
+    max-height: 511px;
+    background-color: var(--primary-blue-30);
+    backdrop-filter: blur(50px);
+    border-radius: 15px;
+    overflow-y: auto;
+    animation: slideUp 0.3s ease-out;
+    margin: 0 8px;
+    padding-bottom: 80px;
+}
+
+.popupContent {
+    padding: 8px;
+    color: var(--pure-white);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.disclaimer {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px 6px;
+    font-style: normal;
+    gap: 8px;
+}
+
+.disclaimer p {
+    color: var(--pure-white);
+    font-size: 12px;
+    font-weight: 200;
+    margin: 0;
+}
+
+.infoIcon {
+    min-width: 16px;
+    font-size: 16px;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--pure-white-50);
+}
+
+.popup::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}

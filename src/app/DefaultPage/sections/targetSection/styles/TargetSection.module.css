@@ -1,0 +1,161 @@
+.customer {
+  display: flex;
+  padding: 5rem;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.customer:nth-child(1) {
+  width: 80.333vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.customerTitle {
+  display: flex;
+  flex-direction: column;
+  padding-left: 135px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  padding: 0px;
+}
+
+.customerTitleText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: -200px;
+  position: relative;
+  width: 63.75vw;
+}
+
+.customerTitleText h1 {
+  font-family: var(--urbanist);
+  font-size: 142px;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--transparent-overlay-off-white-30);
+}
+
+.customerTitle p {
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--body-text-very-light-gray);
+  text-align: center;
+  width: 100%;
+}
+
+.customerTitleText>p {
+  font-family: var(--urbanist);
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  position: absolute;
+  bottom: 0;
+  color: var(--bodytext-pure-white);
+}
+
+.customerTitle p span {
+  color: var(--bodytext-primary-green);
+}
+
+.divider {
+  stroke-width: 1.5px;
+  height: 0;
+  width: 100%;
+  border-color: var(--transparent-overlay-primary-blue-50);
+}
+
+.customerList {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  overflow-x: scroll;
+  width: 100%;
+}
+
+@media screen and (max-width: 426px) {
+  .customer {
+    width: 91.667vw;
+    border-radius: 11px;
+    gap: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .customer:nth-child(1) {
+    width: 100%;
+    display: flex;
+    padding: 28.611px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8.583px;
+  }
+
+  .sliderButtonWeb {
+    display: none;
+  }
+
+  .divider {
+    width: 90%;
+  }
+
+  .customerTitle {
+    width: 100%;
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+    padding: 0px 20px;
+  }
+
+  .customerTitleBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .customerTitleText {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .customerTitleText h1 {
+    font-family: var(--urbanist);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .customerTitle p {
+    font-family: var(--poppins);
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 80%;
+  }
+
+  .customerTitleText>p {
+    font-family: var(--urbanist);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .customerList {
+    height: 200px;
+  }
+}

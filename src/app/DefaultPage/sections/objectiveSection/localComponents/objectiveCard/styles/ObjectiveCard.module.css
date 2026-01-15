@@ -1,0 +1,69 @@
+.objectiveCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.iconContainer {
+    background-color: var(--bodyfill-grey);
+    display: flex;
+    padding: 1.25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 6.25rem;
+}
+
+.objectiveCard h1 {
+    font: var(--fonts-barlow);
+    font-size: 1.875rem;
+    color: var(--primary-green);
+}
+
+.objectiveCard p {
+    font-family: var(--poppins);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--bodytext-pure-white);
+}
+
+@media screen and (max-width : 426px) {
+    .objectiveCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        align-self: stretch;
+    }
+
+    .objectiveCard h1 {
+        font-size: 14px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .objectiveCard p {
+        font-family: var(--poppins)v;
+        font-size: 0.625rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .objectiveCard div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.625rem;
+    }
+
+    .iconContainer {
+        padding: 1.25rem;
+    }
+}

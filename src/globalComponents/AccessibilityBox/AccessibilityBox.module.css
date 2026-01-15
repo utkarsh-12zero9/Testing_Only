@@ -1,0 +1,39 @@
+.accessibilityBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--primary-blue-30);
+  backdrop-filter: blur(50px);
+  padding: 16px 8px;
+  color: var(--bodytext-pure-white);
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+.accessible {
+  display: flex;
+  flex-direction: column;
+  width: 75px;
+  height: 46px;
+  /* gap: 2px; */
+  gap: 4px;
+  align-items: center;
+}
+
+.accessible .icon {
+  background: var(--bodyfill-dark-primary-blue);
+  padding: 8px;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+}
+
+.accessible span {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 8px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+}

@@ -1,0 +1,86 @@
+.inputBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  margin-bottom: 1rem;
+}
+
+.phoneInput {
+  width: 100%;
+  padding: 4px;
+  border-radius: 8px;
+  background: var(--bodyfill-dark-primary-blue);
+  border: 1.5px solid var(--bodyfill-dark-primary-blue);
+
+  &:focus-within {
+    background-color: inherit;
+    border-color: var(--border-primary-green);
+  }
+
+  &>div {
+    width: 100%;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    gap: 10px;
+    border-radius: 8px;
+    /* font: var(--fonts-poppins); */
+    /* font-size: var(--input-font-size); */
+    font-style: normal;
+    color: var(--input-color);
+    caret-color: var(--input-color);
+    background: var(--bodyfill-dark-primary-blue);
+  }
+
+  p {
+    font-size: var(--input-font-size);
+  }
+}
+
+.maskedInputContainer {
+  position: relative;
+  flex: 1;
+}
+
+.placeholderMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* color: var(--input-color); */
+  pointer-events: none;
+  /* font: var(--fonts-poppins); */
+  /* font-size: var(--input-font-size); */
+  line-height: 30px;
+  z-index: 0;
+}
+
+.visibleInput {
+  position: relative;
+  background: transparent;
+  border: none;
+  width: 100%;
+  /* color: var(--input-color); */
+  /* caret-color: var(--input-color); */
+  /* font: var(--fonts-poppins); */
+  /* font-size: var(--input-font-size); */
+  outline: none;
+  z-index: 1;
+}
+
+.verticalDivider {
+  width: 13px;
+  transform: rotate(-90deg);
+  color: var(--bodytext-primary-blue-50);
+  stroke-width: 1.5px;
+}
+
+.errorMessage {
+  font: var(--fonts-poppins);
+  margin-top: 4px;
+  color: var(--bodytext-warning-red);
+  font-size: 0.85rem;
+}

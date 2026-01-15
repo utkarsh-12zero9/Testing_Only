@@ -1,0 +1,42 @@
+.keyFeaturesCard{
+    display: flex;
+    padding: 15px 20px;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+    background-color: var(--transparent-overlay-primary-blue-30);
+    backdrop-filter: blur(25px);
+    border-radius: var(--border-radius);
+}
+
+.keyFeatureIcon{
+    display: flex;
+    width: 20px;
+    height: 16px;
+    padding: 12px 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: var(--border-radius-large);
+    background: var(--bodyfill-primary-green);
+}
+
+.keyFeatureIcon > img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
+    color: var(--icons-gray);
+}
+
+.keyFeatureText{
+    font-family: var(--poppins);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+

@@ -1,0 +1,168 @@
+.service {
+  background-color: var(--transparent-overlay-pure-white-10);
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.service>div {
+  width: 80.333vw;
+  padding: 100px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: var(--dark-green-80);
+}
+
+.serviceTitle {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.serviceTitleText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: -200px;
+  position: relative;
+  width: 100%;
+}
+
+.serviceTitleText h1 {
+  font-family: var(--urbanist);
+  font-size: 142px;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--transparent-overlay-off-white-30);
+}
+
+.serviceTitle p {
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--bodytext-off-white);
+  text-align: center;
+}
+
+.serviceTitleText>p {
+  font-family: var(--urbanist);
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  position: absolute;
+  bottom: 0;
+  color: var(--bodytext-pure-white);
+  white-space: nowrap;
+}
+
+.serviceTitle p span {
+  color: var(--bodytext-primary-green);
+  font: inherit;
+}
+
+.divider {
+  stroke-width: 1.5px;
+  height: 0;
+  width: 90%;
+  border-color: var(--transparent-overlay-primary-blue-50);
+}
+
+.serviceList {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+  overflow-x: auto;
+}
+
+.sliderButtonMobile {
+  display: flex;
+}
+
+@media screen and (max-width: 920px) {
+  .service {
+    width: 91.667vw;
+    border-radius: 11px;
+  }
+
+  .service>div {
+    width: 100%;
+    display: flex;
+    padding: 28.611px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8.583px;
+  }
+
+  .sliderButtonWeb {
+    display: none;
+  }
+
+  .divider {
+    width: 90%;
+  }
+
+  .serviceTitle {
+    width: 100%;
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+    padding: 0px 20px;
+  }
+
+  .serviceTitleBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--bodytext-off-white);
+  }
+
+  .serviceTitleText {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .serviceTitleText h1 {
+    font-family: var(--urbanist);
+    font-size: 16vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .serviceTitle p {
+    font-family: var(--urbanist);
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 80%;
+  }
+
+  .serviceTitleText>p {
+    font-family: var(--urbanist);
+    font-size: 6vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+  .serviceList {
+    width: 94%;
+    display: flex;
+    align-items: center;
+    gap: 5.722px;
+    margin: 0 3%;
+  }
+
+  .sliderButtonMobile {
+    display: flex;
+  }
+}

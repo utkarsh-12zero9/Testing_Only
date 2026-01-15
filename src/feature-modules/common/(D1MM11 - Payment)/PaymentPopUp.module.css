@@ -1,0 +1,367 @@
+.modal {
+    padding: 0;
+}
+
+.title {
+    padding: 20px;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    align-self: stretch;
+
+    h1 {
+        font-family: var(--barlow);
+        font-size: 25px;
+        color: var(--bodytext-off-white);
+    }
+}
+
+
+.container {
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    overflow: auto;
+    padding-inline: 20px;
+    padding-bottom: 20px;
+}
+
+.description {
+    color: var(--bodytext-off-white);
+
+    h4 {
+        font: var(--fonts-poppins-500);
+        font-size: 14px;
+        font-style: normal;
+        line-height: normal;
+    }
+
+    p {
+        font: var(--fonts-poppins);
+        font-size: 10.5px;
+        font-style: normal;
+        line-height: normal;
+    }
+}
+
+.divider {
+    height: 1px;
+    stroke-width: 1.5px;
+    width: 100%;
+    color: var(--transparent-overlay-primary-blue-50);
+}
+
+.quantityInfo {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.selectedPlan {
+    display: flex;
+    height: 35px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    color: var(--bodytext-very-light-gray);
+    font: var(--fonts-poppins);
+
+    p {
+        font: var(--fonts-poppins-semibold);
+        font-size: 12px;
+        font-style: normal;
+        /* font-weight: 600; */
+        line-height: normal;
+    }
+
+    .plan {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 400;
+    }
+}
+
+
+.coupon {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    align-self: stretch;
+}
+
+.coupon .couponHeader {
+    display: flex;
+    align-items: center;
+    font: var(--fonts-poppins-500);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 100%;
+    color: var(--bodytext-off-white);
+
+    &.active {
+        color: var(--bodytext-primary-green);
+    }
+
+    >button {
+        cursor: pointer;
+    }
+}
+
+.coupon>div {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    >:first-child {
+        width: 100%;
+    }
+
+    >button {
+        margin-top: 22px;
+    }
+}
+
+.coupon>div>div>div>input {
+    padding: 5px 10px;
+}
+
+.coupon>img {
+    width: 24px;
+    height: 24px;
+}
+
+.priceBreakDown {
+    width: 100%;
+    padding: 0 10px;
+}
+
+.priceBreakDown .subTotal {
+    display: flex;
+    padding: 4px 0;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    color: var(--bodytext-pure-white);
+    transition: all 0.2s ease;
+
+    button {
+        cursor: pointer;
+    }
+
+    .active {
+        color: var(--bodytext-primary-green);
+    }
+}
+
+.priceBreakDown div {
+    display: flex;
+    padding: 4px 0;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    color: var(--bodytext-off-white);
+}
+
+.priceBreakDown div p {
+    font: var(--fonts-poppins);
+    font-size: 12px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.priceBreakDown div span {
+    font: var(--fonts-poppins-semibold);
+    font-size: 12px;
+    font-style: normal;
+    line-height: normal;
+    color: var(--bodytext-light-gray);
+}
+
+.summaryBreakdown {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 8px 0;
+    gap: 6px;
+
+    margin-left: 10px;
+    padding-left: 15px;
+}
+
+.breakdownItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    color: var(--bodytext-off-white);
+    font: var(--fonts-poppins);
+    font-size: 11px;
+    font-style: normal;
+    /* font-weight: 400; */
+    line-height: normal;
+}
+
+.breakdownItem span {
+    font-weight: 600;
+    color: var(--bodytext-pure-white);
+}
+
+.discount span {
+    color: var(--bodytext-primary-green);
+
+}
+
+.gst {
+    display: flex;
+    max-height: 565px;
+    padding: 0px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    color: var(--bodytext-off-white);
+    cursor: pointer;
+}
+
+
+.gst p {
+    font-family: var(--fonts-poppins-500);
+    font-size: 14px;
+    font-style: normal;
+    /* font-weight: 500; */
+    line-height: normal;
+}
+
+.gstInputContainer {
+    width: 100%;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    font: var(--fonts-barlow);
+    color: var(--bodytext-off-white);
+}
+
+.total h4 {
+
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+.total h3 {
+    color: var(--bodytext-primary-green);
+}
+
+.terms {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+
+    button {
+        flex-shrink: 0;
+        width: 26px !important;
+    }
+
+    p {
+        font-family: var(--fonts-poppins-500);
+        font-size: 10px;
+        font-style: normal;
+        /* font-weight: 500; */
+        line-height: normal;
+        color: var(--bodytext-off-white);
+
+        &.error {
+            color: var(--bodytext-warning-red);
+        }
+    }
+}
+
+.openGstText {
+    color: var(--primary-green);
+}
+
+.gstInput {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+
+    >button {
+        margin-top: 20px;
+    }
+}
+
+.gstInput>div {
+    width: 100%;
+}
+
+.gstInput>div>div>input {
+    padding: 3px 10px;
+}
+
+.gstInputBox {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.gstInputBox>div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.gstInputBox>div>div>input {
+    padding: 3px 10px;
+}
+
+.gstInputBox button {
+    height: fit-content;
+}
+
+
+.submit button {
+    width: 100%;
+}
+
+.buttonsDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.checkBox {
+    width: 18px;
+    height: 18px;
+
+    cursor: pointer;
+    margin-right: 8px;
+    vertical-align: middle;
+
+    accent-color: var(--primary-green);
+
+    transition: all 0.2s ease;
+}
+
+.errorText {
+    font-family: var(--fonts-poppins-500);
+    font-size: 0.85rem;
+    font-style: normal;
+    color: var(--bodytext-warning-red);
+}

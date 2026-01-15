@@ -1,0 +1,71 @@
+.overlay {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay .popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 350px;
+    height: 294px;
+    border-radius: var(--border-radius-large);
+    padding: 20px;
+    background-color: var(--bodyfill-transparent-overlay-primary-blue-30);
+}
+
+.overlay .popup .logo_container {
+    width: 41px;
+    height: 41px;
+    background-color: var(--bodyfill-primary-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+}
+.border {
+    width: 310px;
+    height: 2px;
+    background-color: var(--button-primary-blue-50);
+
+}
+
+.overlay .popup h2 {
+    font: var(--fonts-barlow);
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: var(--bodytext-off-white);
+}
+
+.overlay .popup p {
+    font: var(--fonts-poppins);
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: var(--bodytext-off-white);
+}
+
+.button {
+    width: 242px;
+    height: 37px;
+    background-color: var(--button-primary-green);
+    border-radius: var(--border-radius);
+    font: var(--fonts-poppins-500);
+    font-size: 14px;
+    line-height: 21px;
+    margin-top: 10px;
+    letter-spacing: 0%;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: white;
+}

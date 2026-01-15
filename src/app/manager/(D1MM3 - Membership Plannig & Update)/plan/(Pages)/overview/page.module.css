@@ -1,0 +1,281 @@
+.container {
+    background-image: url('/dashboard/screen.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    height: 100vh;
+    backdrop-filter: blur(25px);
+}
+
+.containerWrapper {
+    background-color: var(--dark-green-50);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerWrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.mainArea {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px 100px 15px;
+    gap: 8px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.mainArea::-webkit-scrollbar {
+    display: none;
+}
+
+.membershipDetails {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 720px;
+    gap: 10px;
+}
+
+.membershipDetails::-webkit-scrollbar {
+    display: none;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 20px;
+    color: var(--primary-green);
+    background-image: url('/dashboard/screen.png');
+    background-size: cover;
+}
+
+.planOverviewTab {
+    width: 100%;
+    max-width: 720px;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    gap: 16px;
+    border-radius: 10px;
+    background: var(--primary-blue-30);
+    backdrop-filter: blur(50px);
+}
+
+.planIconContainer {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.planInfoBox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.membershipName {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 25px;
+    color: var(--pure-white);
+    margin: 0;
+    text-wrap: nowrap;
+}
+
+.planTypeName {
+    font-size: 14px;
+    color: var(--primary-green);
+    margin: 0;
+}
+
+.CTAcontainer {
+    width: 100%;
+    max-width: 720px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 2px;
+    gap: 10px;
+}
+
+.deleteIconButton {
+    width: 27px;
+    height: 27px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--primary-blue-30);
+    backdrop-filter: blur(50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    color: var(--pure-white);
+    transition: all 0.2s ease;
+}
+
+.deleteIconButton:hover {
+    background: var(--warning-red);
+}
+
+.editButtonOverride {
+    width: 91px !important;
+    height: 45px !important;
+    padding: 0 !important;
+}
+
+.shareButtonOverride {
+    flex: 1 !important;
+    height: 45px !important;
+    padding: 0 !important;
+}
+
+.additionalInfo {
+    width: 100%;
+    max-width: 720px;
+    height: 77px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: var(--primary-blue-30);
+    backdrop-filter: blur(50px);
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.additionalInfo::-webkit-scrollbar {
+    display: none;
+}
+
+.infoElement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 4px;
+    padding: 4px;
+    flex-shrink: 0;
+    min-width: 80px;
+}
+
+.infoMain {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.infoValue {
+    font-family: var(--barlow);
+    font-size: 25px;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--primary-green);
+    margin: 0;
+    line-height: 100%;
+}
+
+.infoUnit {
+    font-family: var(--barlow);
+    font-size: 14px;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--primary-green);
+    margin: 0;
+    line-height: 100%;
+}
+
+.infoDividerLine {
+    width: 60px;
+    height: 0.5px;
+    background: var(--primary-blue-50);
+}
+
+.infoLabel {
+    font-family: var(--poppins);
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--off-white);
+    margin: 0;
+    line-height: 100%;
+}
+
+.verticalDivider {
+    width: 1px;
+    height: 40px;
+    background: var(--transparent-overlay-off-white-30);
+    flex-shrink: 0;
+}
+
+.divider {
+    width: 100%;
+    height: 16px;
+    padding: 8px 20px;
+}
+
+.extraInfo {
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+}
+
+.activeViewContainer {
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.activeViewContainer::-webkit-scrollbar {
+    display: none;
+}
+
+/* Final Plan Overview CTAs */
+.finalPlanCTAContainer {
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 15px 20px 15px;
+    margin: 0 auto;
+}
+
+.editPlanButton {
+    width: 30% !important;
+    height: 50px !important;
+    padding: 0 !important;
+}
+
+.savePlanButton {
+    flex: 1 !important;
+    height: 50px !important;
+    padding: 0 !important;
+}

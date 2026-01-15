@@ -1,0 +1,136 @@
+.planSection {
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.overlay {
+  display: flex;
+  width: 80.333vw;
+  padding: 100px 80px 80px 80px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: var(--background-blur-green-2);
+}
+
+.planSectionTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.planSectionTitle h1 {
+  font-family: var(--urbanist);
+  font-size: 142px;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--transparent-overlay-off-white-30);
+}
+
+.planSectionTitle>p {
+  font-family: var(--urbanist);
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  position: absolute;
+  bottom: 0;
+  text-wrap: nowrap;
+  color: var(--bodytext-pure-white);
+}
+
+.planSectionTitle p span {
+  color: var(--bodytext-primary-green);
+}
+
+.description {
+  font-family: var(--poppins);
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--bodyfill-off-white);
+  text-align: center;
+}
+
+.divider {
+  border: none;
+  height: 1.5px;
+  width: 100%;
+  background-color: var(--transparent-overlay-primary-blue-50);
+  margin: 0;
+}
+
+.planList {
+  display: flex;
+  width: 100%;
+  gap: 1.875rem;
+  overflow-x: auto;
+  justify-content: center;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  padding-bottom: 15px;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+}
+
+.planList>* {
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 426px) {
+  .planSection {
+    width: 100vw;
+  }
+
+  .overlay {
+    width: 100vw;
+    padding: 25px 0px;
+    gap: 10px;
+  }
+
+  .planSectionTitleBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .planSectionTitle {
+    width: 100vw;
+  }
+
+  .planSectionTitle h1 {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .description {
+    font-family: var(--poppins);
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 80%;
+  }
+
+  .planSectionTitle>p {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .divider {
+    width: 90%;
+  }
+
+  .planList {
+    padding: 0px 0px 0px 20px;
+    gap: 10px;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+}

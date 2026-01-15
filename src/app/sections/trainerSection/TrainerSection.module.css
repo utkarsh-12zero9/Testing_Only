@@ -1,0 +1,111 @@
+.trainer {
+  display: flex;
+  width: 88.33vw;
+  padding: 100px 80px 80px 80px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.trainerTitle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.trainerTitle h1 {
+  font-family: var(--urbanist);
+  font-size: 142px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--transparent-overlay-off-white-30);
+}
+
+.trainerTitle > p {
+  font-family: var(--urbanist);
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  position: absolute;
+  bottom: 0;
+  color: var(--bodytext-pure-white);
+  text-align: center;
+}
+
+.trainerTitle > p > span {
+  color: var(--bodytext-primary-green);
+}
+
+.divider {
+  stroke-width: 1.5px;
+  height: 0px;
+  /* align-self: stretch; */
+  width: 100%;
+  border-color: var(--transparent-overlay-primary-blue-50);
+}
+
+.coachList {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+  overflow-x: scroll;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+.coachList::-webkit-scrollbar {
+  display: none; 
+}
+
+@media screen and (max-width: 426px){
+
+  .trainer{
+    width: 100%;
+    display: flex;
+    padding: 25px 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .trainerTitle{
+    width: 100%;
+  }
+  
+  .trainerTitle h1 {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .trainerTitle > p {
+    font-family: var(--urbanist);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .coachList{
+    overflow: hidden;
+    display: flex;
+    /* padding: 0px 135px; */
+    width: 90%;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-x : scroll ;
+  }
+
+  .divider{
+    width: 90%;
+  }
+
+}

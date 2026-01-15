@@ -1,0 +1,70 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bodyfill-black-2);
+  z-index: var(--popup-layer);
+}
+
+.bottomModal {
+  background: var(--pure-white);
+  color: var(--pure-black);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: var(--popup-layer);
+}
+
+.header {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description {
+  margin-bottom: 15px;
+}
+
+.row,
+.smallRow,
+.totalRow {
+  margin-bottom: 10px;
+}
+
+.label,
+.value {
+  display: block;
+}
+
+.divider {
+  height: 1px;
+  background: var(--very-light-gray);
+  margin: 15px 0;
+}
+
+.checkboxRow {
+  margin-top: 15px;
+}
+
+.btnRow {
+  margin-top: 20px;
+}
+
+.cancelBtn,
+.payBtn {
+  padding: 10px;
+  margin-right: 10px;
+  background: var(--pure-white);
+  color: var(--pure-black);
+  border: 1px solid var(--pure-black);
+}
+
+.payBtn:disabled {
+  opacity: 0.5;
+}
+
+.termsText {
+  color: var(--pure-black);
+}

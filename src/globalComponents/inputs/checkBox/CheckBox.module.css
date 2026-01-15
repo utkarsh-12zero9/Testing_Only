@@ -1,0 +1,46 @@
+.radioBox {
+  margin-bottom: 1rem;
+}
+
+
+.radioBox label {
+  font: var(--fonts-poppins);
+  /* font-size: var(--input-font-size); */
+  font-style: normal;
+  line-height: normal;
+  /* color: var(--input-color); */
+  cursor: pointer;
+}
+
+.optional {
+    font-size: var(--input-optional-font-size);
+    margin-left: 2px;
+}
+
+.button {
+  border-radius: var(--border-radius);
+  gap: 10px;
+  opacity: 1;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background: var(--bodyfill-dark-primary-blue);
+  border: 1.5px solid var(--bodyfill-dark-primary-blue);
+  cursor: pointer;
+  overflow-wrap: break-word;
+  label {
+    width: 100%;
+  }
+}
+
+.selectedButton {
+  border: 1.5px solid var(--border-primary-green) !important;
+}
+
+
+.errorText {
+  font: var(--fonts-poppins);
+  margin-top: 4px;
+  color: var(--bodytext-warning-red);
+  font-size: 0.85rem;
+}

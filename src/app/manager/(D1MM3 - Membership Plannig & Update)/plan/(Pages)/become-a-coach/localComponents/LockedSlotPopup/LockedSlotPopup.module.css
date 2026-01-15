@@ -1,0 +1,130 @@
+.overlay {
+    position: fixed;
+    padding: 0 4px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bodyfill-black-2);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 9999;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.popup {
+    width: 350px;
+    background-color: var(--bodyfill-primary-blue-50);
+    border-radius: var(--border-radius-large);
+    padding: 40px 20px 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    animation: scaleIn 0.3s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.iconContainer {
+    width: 40px;
+    height: 40px;
+    background-color: var(--button-primary-blue);
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--headings-primary-green-white);
+    margin: 0;
+    font-style: italic;
+    text-align: center;
+}
+
+.divider {
+    width: 270px;
+    height: 0;
+    border: none;
+    border-top: 1px solid var(--border-primary-blue-50);
+}
+
+.description {
+    font-size: 14px;
+    font-weight: 200;
+    color: var(--bodytext-very-light-gray);
+    text-align: center;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.cancelButton {
+    flex: 0 0 auto;
+    padding: 10px 24px;
+    background: transparent;
+    border: 2px solid var(--border-pure-white);
+    border-radius: var(--border-radius);
+    color: var(--bodytext-pure-white);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cancelButton:hover {
+    border-color: var(--border-pure-white);
+    background-color: var(--pure-white-10);
+}
+
+.buyButton {
+    flex: 0 0 auto;
+    padding: 10px 24px;
+    background-color: var(--button-primary-green);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--labels-off-black);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.buyButton:hover {
+    background-color: var(--button-primary-green);
+    filter: brightness(0.9);
+}

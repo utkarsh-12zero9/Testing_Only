@@ -1,0 +1,70 @@
+.primaryButton {
+    --color: var(--off-black);
+    --bg-color: var(--primary-green);
+
+    display: flex;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--bg-color);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:disabled {
+        --color: var(--inactive-color);
+        cursor: not-allowed;
+    }
+
+    &:hover:not(:disabled) {
+        background-color: inherit;
+    }
+}
+
+.primaryButton div {
+    width: 100%;
+    display: flex;
+    padding: 6px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius);
+
+    /* Typography */
+    &,
+    p,
+    span {
+        font: var(--poppins-500);
+        font-size: 12px;
+        line-height: normal;
+        color: var(--color);
+    }
+
+    /* Icons */
+    img,
+    svg {
+        max-width: 16px;
+        max-height: 16px;
+    }
+}
+
+/* color variants */
+.primaryButton {
+    &.leaf-green {
+        --color: var(--pure-white);
+        --bg-color: var(--leaf-green);
+    }
+
+    &.warning-red {
+        --color: var(--pure-white);
+        --bg-color: var(--warning-red);
+    }
+
+    &.primary-blue {
+        --color: var(--pure-white);
+        --bg-color: var(--primary-blue);
+    }
+}

@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 8px;
+}
+
+.stepWrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.stepWrapper:last-child {
+    width: auto;
+}
+
+.stepCircle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--very-light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.stepCircle.active {
+    background-color: var(--primary-green);
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    color: var(--off-black);
+}
+
+.connector {
+    flex: 1;
+    height: 8px;
+    background-color: var(--very-light-gray);
+    margin: 0 -2px;
+    z-index: 0;
+    transition: all 0.3s ease;
+}
+
+.activeConnector {
+    background-color: var(--primary-green);
+}

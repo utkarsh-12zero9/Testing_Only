@@ -1,0 +1,347 @@
+.viewContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 20px;
+}
+
+.statsRow {
+    display: flex;
+    gap: 12px;
+}
+
+.statCard {
+    flex: 1;
+    background: var(--primary-blue-20);
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 12px;
+}
+
+.statSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.verticalDivider {
+    width: 1px;
+    background: var(--pure-white-30);
+    align-self: stretch;
+}
+
+.statLabel {
+    color: var(--pure-white);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.statMain {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.statValue {
+    font-family: var(--barlow);
+    font-size: 32px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.statUnit {
+    color: var(--primary-green);
+    font-family: var(--barlow);
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.starIcon {
+    filter: brightness(0) saturate(100%);
+}
+
+.starIcon:global(img) {
+    color: inherit;
+}
+
+.statDivider {
+    width: 100%;
+    height: 1px;
+    background: var(--transparent-overlay-pure-white-10);
+    margin: 4px 0;
+}
+
+.trendRow {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.trendValue {
+    color: var(--warning-red);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.trendLabel {
+    color: var(--pure-white);
+    font-size: 10px;
+    opacity: 0.7;
+}
+
+.ratingsCard {
+    background: var(--primary-blue-20);
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.sectionTitle {
+    color: var(--pure-white);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.histogram {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.histoRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.histoStar {
+    color: var(--pure-white);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 30px;
+}
+
+.histoBarContainer {
+    flex: 1;
+    height: 6px;
+    background: var(--transparent-overlay-pure-white-10);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.histoBar {
+    height: 100%;
+    border-radius: 3px;
+}
+
+.histoCount {
+    color: var(--pure-white);
+    font-size: 10px;
+    width: 30px;
+    text-align: right;
+}
+
+.reviewsList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.reviewCard {
+    background: var(--primary-blue-20);
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.reviewHeader {
+    display: flex;
+    gap: 12px;
+}
+
+.reviewerAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.reviewerInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ratingRow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ratingValue {
+    color: var(--pure-white);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.reviewMeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2px;
+}
+
+.reviewDate {
+    color: var(--pure-white);
+    font-size: 10px;
+    opacity: 0.6;
+}
+
+.reviewerName {
+    color: var(--pure-white);
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.reviewComment {
+    color: var(--pure-white);
+    font-size: 11px;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+.trainerCard {
+    background: transparent;
+    border: 1.5px solid var(--primary-blue);
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    gap: 12px;
+    overflow: hidden;
+    align-items: center;
+    width: 100%;
+}
+
+.trainersCardContainer {
+    background: var(--primary-blue-30);
+    backdrop-filter: blur(50px);
+    border-radius: 12px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 354px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.trainersCardContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.trainerAvatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.avatarImg {
+    object-fit: cover;
+}
+
+.trainerInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.trainerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trainerName {
+    color: var(--pure-white);
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    margin: 0;
+}
+
+.roleHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.trainerRole {
+    color: var(--pure-white);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.roleDivider {
+    color: var(--primary-green);
+    font-size: 12px;
+}
+
+.expertiseList {
+    display: flex;
+    gap: 4px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.expertiseTag {
+    color: var(--primary-green);
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* Tags View Styles */
+.tagsContainer {
+    background: var(--primary-blue-20);
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.tagsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tagChip {
+    background: var(--dark-green-50);
+    color: var(--pure-white);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+}

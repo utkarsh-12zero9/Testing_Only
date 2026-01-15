@@ -1,0 +1,28 @@
+.header {
+  padding: 19px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftFrame {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+}
+
+.leftFrame button {
+  padding: 6px 9px;
+
+  img {
+    width: 6px;
+    height: 12px;
+  }
+}
+
+.leftFrame p {
+  font-family: var(--fonts-poppins-500);
+  /* font-weight: 500; */
+  font-size: 16px;
+  color: var(--bodytext-pure-white);
+}
