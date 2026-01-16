@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { useSelector } from 'react-redux';
 import styles from './page.module.css';
@@ -28,7 +28,7 @@ import LoadingPage from '@/globalComponents/LoadingPage/LoadingPage';
 import PlanActionPopup from '../../components/PlanActionPopup/PlanActionPopup';
 import SharePopup from './localComponents/SharePopup/SharePopup';
 
-const Overview = () => {
+const OverviewContent = () => {
     const [selectedPlan, setSelectedPlan] = useState<any>(null);
     const [activeTab, setActiveTab] = useState(0);
     const [showDeletePopup, setShowDeletePopup] = useState(false);
@@ -395,4 +395,10 @@ const Overview = () => {
     );
 };
 
-export default Overview;
+export default function Overview() {
+    return (
+        <Suspense fallback={<LoadingPage />}>
+            <OverviewContent />
+        </Suspense>
+    );
+}

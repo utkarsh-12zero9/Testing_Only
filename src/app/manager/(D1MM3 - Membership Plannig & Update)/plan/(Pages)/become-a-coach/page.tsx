@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo, Suspense } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import HeaderManagerModule from '@/globalComponents/HeaderManager/ModuleHeader/ModuleHeader';
 import Heading from '@/globalComponents/Heading/Heading';
@@ -15,10 +15,11 @@ import TrainerDetailsPopup from './localComponents/TrainerDetailsPopup/TrainerDe
 import PlanActionPopup from '../../components/PlanActionPopup/PlanActionPopup';
 import { getTrainerProfileByBusinessID, deleteTrainerProfileByTrainerID, updateTrainerProfileByTrainerID } from '../../services/trainerService';
 import { getBusinessProfile } from '../../services/businessProfile';
+import LoadingPage from '@/globalComponents/LoadingPage/LoadingPage';
 import styles from './page.module.css';
 import { Info } from 'lucide-react';
 
-export default function BecomeACoachPage() {
+function BecomeACoachContent() {
     const pathname = usePathname();
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -533,5 +534,13 @@ export default function BecomeACoachPage() {
                 mode="remove"
             />
         </div>
+    );
+}
+
+export default function BecomeACoachPage() {
+    return (
+        <Suspense fallback={<LoadingPage />}>
+            <BecomeACoachContent />
+        </Suspense>
     );
 }
