@@ -145,7 +145,7 @@
     }
 
     .links li {
-        font-family: var(--var(--poppins));
+        font-family: --var(--poppins);
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
