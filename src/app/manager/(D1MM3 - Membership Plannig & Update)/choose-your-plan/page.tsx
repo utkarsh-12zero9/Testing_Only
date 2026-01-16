@@ -14,15 +14,13 @@ import PaymentPopUp from "@/feature-modules/common/(D1MM11 - Payment)/PaymentPop
 import OfferingsTable from "./components/Offerings/Offerings";
 import EnterprisePopup from "./components/Enterprise/EnterprisePopup";
 import LoadingPage from "@/globalComponents/LoadingPage/LoadingPage";
-import { Payment } from "@/feature-modules/manager/(D1MM9 - User Verification)/types";
+import { Payment, Pricing } from "@/feature-modules/common/(D1MM11 - Payment)/types";
 
 interface PackagePlan {
 	packageID: string;
 	pkgName: string;
 	validity: number;
-	pricing: {
-		invoiceAmount: number;
-	};
+	pricing: Pricing;
 }
 
 export default function ChoosePlan() {
@@ -136,11 +134,17 @@ export default function ChoosePlan() {
 			}
 
 			const payment: Payment = {
+				_id: paymentID || "",
+				orderID: paymentID || "",
+				planSnapshot: {
+					pkgName: plan.pkgName,
+					price: plan.pricing.invoiceAmount,
+				},
+				originalAmount: plan.pricing.invoiceAmount,
 				amount: plan.pricing.invoiceAmount,
-				paymentID: paymentID,
 				pricing: plan.pricing,
 				status: "Processing",
-				invoiceUrl: res?.data?.invoiceUrl,
+				invoiceUrl: res?.data?.invoiceUrl || "",
 			};
 
 			setPaymentData(payment);
@@ -284,9 +288,10 @@ export default function ChoosePlan() {
 				{showPaymentPopup && paymentData && (
 					<PaymentPopUp
 						payment={paymentData}
+						setPayment={setPaymentData}
+						description="Complete your payment to activate your selected plan."
 						onSuccess={handleSuccessPayment}
 						onClose={() => setShowPaymentPopup(false)}
-						onDismiss={() => setShowPaymentPopup(false)}
 					/>
 				)}
 
@@ -305,7 +310,7 @@ export default function ChoosePlan() {
 				)}
 
 				{!showPaymentPopup && !showEnterprisePopup && (
-					<OfferingsTable plans={visiblePlans} selectedPlanID={selectedPlanID!} />
+					<OfferingsTable plans={visiblePlans as any[]} selectedPlanID={selectedPlanID!} />
 				)}
 
 				{!showPaymentPopup && !showEnterprisePopup && (

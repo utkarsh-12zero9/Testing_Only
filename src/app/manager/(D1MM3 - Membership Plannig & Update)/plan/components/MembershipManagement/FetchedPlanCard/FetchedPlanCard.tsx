@@ -17,17 +17,17 @@ const FetchedPlanCard: React.FC<FetchedPlanCardProps> = ({ plan }) => {
     const router = useRouter();
     const planName = plan.name || plan.membershipName || plan.planName || 'Unnamed Plan';
     const membershipType = plan.membershipType || 'Unknown-Based';
-    const totalPrice = plan.totalPrice || plan.planPrice || plan.sessionPrice || 0;
 
-    const durationDetail = plan.durationDetails && plan.durationDetails.length > 0
-        ? plan.durationDetails[0]
-        : { period: plan.period || plan.duration || plan.validity || 0, periodPrice: totalPrice };
+    // Access durationDetails as an object, not an array
+    const durationDetail = plan.durationDetails || {};
+    const period = durationDetail.period || plan.duration || plan.validity || 0;
+    const periodPrice = durationDetail.periodPrice || plan.price || 0;
+    const sessionCount = durationDetail.sessionCount || 0;
+    const sessionPrice = durationDetail.sessionPrice || 0;
 
-    const period = durationDetail.period || 0;
-    const periodPrice = durationDetail.periodPrice || totalPrice;
-
-    const participants = plan.participantsCount !== undefined ? plan.participantsCount : null;
-    const capacity = plan.capacity !== undefined ? plan.capacity : null;
+    // These properties don't exist on MembershipPlan - using fallback values
+    const participants = null;
+    const capacity = plan.maxUsers || null;
 
     const isPeriodBased = membershipType === 'Period-Based';
 
@@ -60,7 +60,7 @@ const FetchedPlanCard: React.FC<FetchedPlanCardProps> = ({ plan }) => {
                         <span className={styles.value}>
                             {membershipType === 'Period-Based'
                                 ? period
-                                : (plan.maxUsers || plan.sessionCount || period)}
+                                : (sessionCount || period)}
                         </span>
                         <span className={styles.label}>
                             {membershipType === 'Period-Based' ? ' Days' : ' Sessions'}

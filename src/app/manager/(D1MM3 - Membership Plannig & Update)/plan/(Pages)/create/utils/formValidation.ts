@@ -68,7 +68,7 @@ export function validateField(
 ): string {
     switch (fieldName) {
         case 'membershipName':
-            return !value?.trim() ? 'Membership Name is required' : '';
+            return typeof value === 'string' && !value.trim() ? 'Membership Name is required' : '';
 
         case 'selectedObjectives':
             return (value as string[]).length < 4 ? 'Select at least 4 objectives' : '';

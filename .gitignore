@@ -19,6 +19,8 @@
 
 # production
 /build
+build-errors.txt
+build-errors-fixed.txt
 
 # misc
 .DS_Store

@@ -69,10 +69,14 @@ const OrderSummary: React.FC<OrderSummaryProps> = ({
                 }
                 break;
             case 'couponCode':
-                setCouponCode(value);
+                if (typeof value === 'string') {
+                    setCouponCode(value);
+                }
                 break;
             case 'termsAccepted':
-                setIsTermsAccepted(value);
+                if (typeof value === 'boolean') {
+                    setIsTermsAccepted(value);
+                }
                 break;
             case 'addGST':
                 setAddGST(!addGST);

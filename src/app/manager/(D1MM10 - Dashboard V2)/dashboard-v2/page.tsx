@@ -67,10 +67,31 @@ export default function Page() {
         <AccessibilityBox progress={progress} />
         <hr className={styles.hr} />
 
-        <ActivePendingCards activeMembers={dashboardData?.activeMembers} />
+        <ActivePendingCards
+          activeMembers={{
+            currentCount: dashboardData?.activeMembers || 0,
+            percentageChange: 0
+          }}
+        />
         <hr className={styles.hr} />
-        <PendingRenewals pendingRenewals={dashboardData?.pendingRenewals} />
-        <DashboardInfo checkIns={dashboardData?.checkIns} expiringSoonMembers={dashboardData?.expiringSoonMembers} />
+        <PendingRenewals
+          pendingRenewals={{
+            currentCount: dashboardData?.pendingRenewals || 0,
+            percentageChange: 0
+          }}
+        />
+        <DashboardInfo
+          checkIns={{
+            today: { count: dashboardData?.checkIns || 0, percentageChange: 0 },
+            thisWeek: { count: dashboardData?.checkIns || 0, percentageChange: 0 },
+            thisMonth: { count: dashboardData?.checkIns || 0, percentageChange: 0 }
+          }}
+          expiringSoonMembers={{
+            today: { count: dashboardData?.expiringSoonMembers || 0, percentageChange: 0 },
+            thisWeek: { count: dashboardData?.expiringSoonMembers || 0, percentageChange: 0 },
+            thisMonth: { count: dashboardData?.expiringSoonMembers || 0, percentageChange: 0 }
+          }}
+        />
       </div>
       <BottomNav pathname='' />
     </div>
