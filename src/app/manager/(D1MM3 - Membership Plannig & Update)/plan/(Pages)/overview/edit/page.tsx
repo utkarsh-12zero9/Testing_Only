@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import HeaderManagerModule from '@/globalComponents/HeaderManager/ModuleHeader/ModuleHeader';
 import Heading from '@/globalComponents/Heading/Heading';
@@ -13,7 +13,7 @@ import { MembershipPlan, PlanFormData } from '../../../types';
 
 import styles from './page.module.css';
 
-export default function EditPlanPage() {
+function EditPlanContent() {
     const pathname = usePathname();
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -227,5 +227,13 @@ export default function EditPlanPage() {
                 </CommonPopup>
             )}
         </div>
+    );
+}
+
+export default function EditPlanPage() {
+    return (
+        <Suspense fallback={<LoadingPage />}>
+            <EditPlanContent />
+        </Suspense>
     );
 }

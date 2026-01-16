@@ -2,12 +2,10 @@
 
 import React, { useEffect, useState, Suspense } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
-import { useSelector } from 'react-redux';
 import styles from './page.module.css';
 import HeaderManagerModule from '@/globalComponents/HeaderManager/ModuleHeader/ModuleHeader';
 import { deletePlan, getMembershipPlanById } from '../../services/membershipService';
 import { invalidatePlansCache } from '../../utils/cacheUtils';
-
 import Heading from '@/globalComponents/Heading/Heading';
 import ModalDivider from '@/globalComponents/modal/ModalDivider';
 import Image from 'next/image';
@@ -17,7 +15,6 @@ import SecondaryButton from '@/globalComponents/buttons/secondaryButton/Secondar
 import TabNav from '@/globalComponents/TabNav/TabNav';
 import BottomNav from '@/globalComponents/BottomNav/BottomNav';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
-import { selectBusinessID } from '../../../../Redux/slice/business-slice';
 
 // Local Components
 import ReviewsView from './localComponents/ExtraInfo/ReviewsView';
