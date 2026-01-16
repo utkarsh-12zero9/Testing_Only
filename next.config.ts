@@ -10,14 +10,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  allowedDevOrigins: ['https://blwg5vz3-6501.inc1.devtunnels.ms', 'http://localhost:6501', 'https://blwg5vz3-6500.inc1.devtunnels.ms/', 'http://localhost:6500'],
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-
 };
 
 export default nextConfig;

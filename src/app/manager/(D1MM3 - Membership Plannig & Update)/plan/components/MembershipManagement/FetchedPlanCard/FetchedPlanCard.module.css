@@ -156,7 +156,7 @@
     font-size: 12px !important;
     font-weight: 500 !important;
     min-height: 38px !important;
-    display: flex !;
-    align-items: center !;
-    justify-content: center !;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
